@@ -1,0 +1,150 @@
+<table class="table">
+    <thead>
+        <tr class="double">
+            <th>Sorszám</th>
+            <th>Oldalhatár</th>
+            <th>Alsó magasság</th>
+            <th>Felső magasság</th>
+            <th>Tervezett üzemidő kezdete</th>
+            <th>Tervezett üzemidő vége</th>
+            <th>Tevékenység</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">1</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">464758N 0194102E<br> R=3 NM<br>(LHMP Matkópuszta)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 115</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés<br>(Parachute jumping,<br>aerobatics)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">2</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">465333N 0185506E<br>465448N 0185347E<br>465543N 0185448E<br>465339N 0185816E<br>465147N 0185511E<br>465249N 0185333E<br>(LHDV Dunaújváros)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 135</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">06:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">18:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás<br>(Parachute jumping)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">3</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">470941N 0183038E<br>471035N 0182901E<br>470852N 0182623E<br>470454N 0182457E<br>470417N 0182848E<br>(Börgönd West)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 145</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">06:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés<br>(Parachute jumping,<br>aerobatics)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">4</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">470936N 0183048E<br>470910N 0183458E<br>470336N 0183250E<br>470414N 0182900E<br>(Börgönd East)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 145</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">06:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés<br>(Parachute jumping,<br>aerobatics)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">5</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">462400N 0174400E<br> R=15 km<br>(LHKV Kaposújlak)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 165</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">20:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés<br>(Parachute jumping,<br>aerobatics)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">6</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">473425N 0191957E<br> R=1 NM<br>(LHGD Gödöllő)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">7500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">10:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás<br>(Parachute jumping)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">7</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">475856N 0214100E<br>R=10 km<br>(LHNY Nyíregyháza)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">4000 feet<br>AMSL</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 155</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">04:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">20:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás<br>(Parachute jumping)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">8</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">474304N 0184245E<br>R=1 km<br>(Dorog kőbánya)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">1500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">9</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">470024N 0194905E<br>465938N 0194931E<br>465220N 0200252E<br>465238N 0200803E<br>465258N 0200801E<br>470015N 0195148E<br>(LHKE-Tiszakürt)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">1500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">08:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">18:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">10</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">470441N 0175812E<br> R=12 km<br>(LHSA<br>Szentkirályszabadja)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 135</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">06:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés,<br>tűzijáték, UL repülés,<br>(Parachute jumping,<br>aerobatics, fireworks,<br>UL flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">11</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">473005N 0190258E<br>R=400 m<br>(Budapest<br>Roosevelt tér)<br>Magában foglalva<br>az LHR1 légteret!</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">2500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">12</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">471106N 0163900E<br>R=1 km<br>(Szombathely S)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">1500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">13</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">462300N 0200000E<br>462300N 0201300E<br>461500N 0201300E<br>461217N 0200526E<br>461500N 0200000E<br>(LHUD TIZ)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">4000 feet<br>AMSL</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">FL 135</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">05:00</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">20:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">Eje.ugrás, műrepülés<br>(Parachute jumping,<br>aerobatics)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">14</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">474316N 0195415E<br>R=3 km<br>(Atkár-<br>Gyöngyöshalász)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">4500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">22:00</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+        <tr>
+            <td><span class="table-label">Sorszám:</span><span class="table-content">15</span></td>
+            <td><span class="table-label">Oldalhatár:</span><span class="table-content">471309N 0183542E<br>R=3 km<br>(Pákozd E)</span></td>
+            <td><span class="table-label">Alsó magasság:</span><span class="table-content">GND</span></td>
+            <td><span class="table-label">Felső magasság:</span><span class="table-content">1500 feet<br>AMSL</span></td>
+            <td><span class="table-label">Tervezett üzemidő kezdete:</span><span class="table-content">SR</span></td>
+            <td><span class="table-label">Tervezett üzemidő vége:</span><span class="table-content">SS</span></td>
+            <td><span class="table-label">Tevékenység:</span><span class="table-content">UAV repülés<br>(UAV flight)</span></td>
+        </tr>
+    </tbody>
+</table>
