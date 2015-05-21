@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 import os
-from hunairspace.utils import ensure_dir, read_file_contents, write_json
-from hunairspace.hungarocontrol_aip import download_chapter
+from hunairspace.utils import ensure_dir, read_file_contents, write_json, pp
+from hunairspace.hungarocontrol_aip import download_chapter, download_airport
 from bs4 import BeautifulSoup
 
 
@@ -32,12 +32,8 @@ def parse_2_td(td):
         data['geometry_raw_and'] = parts[5]
         assert parts[6] == data['upper_raw']
         assert parts[7] == data['lower_raw']
-    if 'MTMA' in data['name']:
-        data['class'] = 'MTMA'
-    if 'MCTR' in data['name']:
-        data['class'] = 'MCTR'
-
-    assert 'class' in data
+    if 'class' not in data:
+        data['class'] = get_class_from_name(data['name'])
     return data
 
 
@@ -90,7 +86,7 @@ def parse_5_table(table, title, chapter):
 
 
 def parse_5126_tr(tr):
-    tds = tr.findChildren('td')
+    tds = tr.find_all('td')
     if len(tds) != 3:
         return
 
@@ -112,7 +108,7 @@ def parse_5126_tr(tr):
 
 
 def parse_55_tr(tr):
-    tds = tr.findChildren('td')
+    tds = tr.find_all('td')
     if len(tds) != 4:
         return
 
@@ -136,12 +132,107 @@ def parse_55_tr(tr):
     return data
 
 
+def parse_airport(soup, airport):
+    airspaces = list()
+
+    h4s = soup.find_all('h4')
+    h4 = [h4 for h4 in h4s if '2.17' in h4.span.text][0]
+    table = h4.find_next_sibling('table')
+    trs = table.find_all('tr')
+
+    for tr in trs:
+        tds = tr.find_all('td')
+        if tds[1].text.strip() == 'Vertical limits':
+            text = tds[2].text.strip()
+            limit_lines = [l.strip() for l in text.splitlines() if l.strip()]
+
+        if tds[1].text.strip() == 'Designation and lateral limits':
+            text = tds[2].text.strip()
+            geom_lines = [l.strip() for l in text.splitlines() if l.strip()]
+
+    assert limit_lines and geom_lines
+
+    if airport == 'LHBC':
+        data = {
+            'name': ' '.join(geom_lines[:2]),
+            'geometry_raw': geom_lines[2],
+            'upper_raw': limit_lines[0].rstrip(' /'),
+            'lower_raw': limit_lines[1],
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+    if airport == 'LHBP':
+        upper, lower = limit_lines[0].split('/ ')
+        data = {
+            'name': geom_lines[0],
+            'geometry_raw': geom_lines[1],
+            'upper_raw': upper,
+            'lower_raw': lower,
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+    if airport == 'LHDC':
+        for l in geom_lines:
+            name, geom = l.split(u'\ufffd')
+            limit = [ll.lstrip(name) for ll in limit_lines if ll.startswith(name)][0]
+            upper, lower = limit.split(' / ')
+            data = {
+                'name': name,
+                'geometry_raw': geom,
+                'upper_raw': upper,
+                'lower_raw': lower,
+                'notes': airport
+            }
+            data['class'] = get_class_from_name(data['name'])
+            airspaces.append(data)
+
+    if airport == 'LHFM':
+        lower, upper = limit_lines[0].split(' to ')
+        lower = lower.replace('SFC', 'GND')
+        data = {
+            'name': geom_lines[0],
+            'geometry_raw': geom_lines[1],
+            'upper_raw': upper,
+            'lower_raw': lower,
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+
+    return airspaces
+
+
+def get_class_from_name(name):
+    classes = ['TIZ', 'MCTR', 'CTR', 'CTA', 'MTMA']
+    for c in classes:
+        if c in name:
+            return c
+    else:
+        raise ValueError('No class found', name)
+
+
+
+
 def process_chapter(chapter):
     download_chapter(chapter, version, html_dir)
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
     soup = BeautifulSoup(read_file_contents(html_file))
     data = process_lookup[chapter](soup, chapter)
     write_json('{}.json'.format(chapter), data)
+
+
+def process_airport(airport):
+    download_airport(airport, version, html_dir)
+    html_file = os.path.join(html_dir, '{}.html'.format(airport))
+    soup = BeautifulSoup(read_file_contents(html_file))
+    data = parse_airport(soup, airport)
+    pp(data)
+
 
 
 process_lookup = {
@@ -153,6 +244,7 @@ process_lookup = {
     '5.6': parse_5,
 }
 
+airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 
 version = '2015-04-30'
 html_dir = os.path.join('data', 'aip', version)
@@ -161,6 +253,10 @@ ensure_dir(html_dir)
 for chapter in process_lookup:
     process_chapter(chapter)
 
-# process_chapter('5.6')
+# for airport in airports:
+    # print airport
+    # process_airport(airport)
+    # print '---'
 
+process_airport('LHFM')
 

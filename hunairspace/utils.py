@@ -1,7 +1,6 @@
 import os
 import codecs
 import json
-import requests
 from bs4 import BeautifulSoup
 
 
@@ -58,3 +57,9 @@ def ensure_dir(directory):
 def beautify_html(html):
     soup = BeautifulSoup(html)
     return soup.prettify()
+
+
+def pp(data):
+    print json.dumps(data, indent=2, ensure_ascii=False, sort_keys=True)
+
+
