@@ -145,6 +145,7 @@ def parse_airport(soup, airport):
         if tds[1].text.strip() == 'Vertical limits':
             text = tds[2].text.strip()
             limit_lines = [l.strip() for l in text.splitlines() if l.strip()]
+
             if airport == 'LHSM':
                 text = tds[3].text.strip()
                 limit_lines += [l.strip() for l in text.splitlines() if l.strip()]
@@ -152,9 +153,22 @@ def parse_airport(soup, airport):
         if tds[1].text.strip() == 'Designation and lateral limits':
             text = tds[2].text.strip()
             geom_lines = [l.strip() for l in text.splitlines() if l.strip()]
+
             if airport == 'LHSM':
                 text = tds[3].text.strip()
                 geom_lines += [l.strip() for l in text.splitlines() if l.strip()]
+
+            if airport == 'LHUD':
+                geom = list()
+                next_trs = tr.find_next_siblings('tr')
+                for ntr in next_trs:
+                    ntds = ntr.find_all('td')
+                    text = ntds[0].text.strip()
+                    if text == '2':
+                        break
+                    geom.append(' '.join([ntd.text.strip() for ntd in ntds[-2:]]))
+                geom_lines += [', '.join(geom)]
+
 
     assert limit_lines and geom_lines
 
@@ -169,7 +183,7 @@ def parse_airport(soup, airport):
         data['class'] = get_class_from_name(data['name'])
         airspaces.append(data)
 
-    elif airport == 'LHBP':
+    elif airport == 'LHBP' or airport == 'LHUD':
         upper, lower = limit_lines[0].split('/ ')
         data = {
             'name': geom_lines[0],
@@ -261,11 +275,9 @@ def parse_airport(soup, airport):
     else:
         pp(geom_lines)
         pp(limit_lines)
-        # raise ValueError('Unknown airport', airport)
-
+        raise ValueError('Unknown airport', airport)
 
     return airspaces
-
 
 def get_class_from_name(name):
     classes = ['MCTR', 'CTR', 'CTA', 'MTMA', 'TIZ']
@@ -276,13 +288,11 @@ def get_class_from_name(name):
         raise ValueError('No class found', name)
 
 
-
-
-def process_chapter(chapter):
+def process_chapter(chapter, parse_func):
     download_chapter(chapter, version, html_dir)
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
     soup = BeautifulSoup(read_file_contents(html_file))
-    data = process_lookup[chapter](soup, chapter)
+    data = parse_func(soup, chapter)
     write_json('{}.json'.format(chapter), data)
 
 
@@ -291,32 +301,41 @@ def process_airport(airport):
     html_file = os.path.join(html_dir, '{}.html'.format(airport))
     soup = BeautifulSoup(read_file_contents(html_file))
     data = parse_airport(soup, airport)
-    pp(data)
+    return data
+
+
+def process_chapters():
+    chapter_lookup = {
+        '2.1': parse_2,
+        '2.2': parse_2,
+        '5.1': parse_5,
+        '5.2': parse_5,
+        '5.5': parse_5,
+        '5.6': parse_5,
+    }
+
+    for chapter in chapter_lookup:
+        process_chapter(chapter, chapter_lookup[chapter])
+
+
+def process_airports():
+    airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
+
+    data = list()
+    for airport in airports:
+        data.append(process_airport(airport))
+
+    write_json('airports.json', data)
 
 
 
-process_lookup = {
-    '2.1': parse_2,
-    '2.2': parse_2,
-    '5.1': parse_5,
-    '5.2': parse_5,
-    '5.5': parse_5,
-    '5.6': parse_5,
-}
 
-airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
+
+
 
 version = '2015-04-30'
 html_dir = os.path.join('data', 'aip', version)
 ensure_dir(html_dir)
 
-for chapter in process_lookup:
-    process_chapter(chapter)
-
-# for airport in airports:
-#     print airport
-#     process_airport(airport)
-#     print '---'
-
-process_airport('LHSM')
-
+process_chapters()
+process_airports()
