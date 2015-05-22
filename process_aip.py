@@ -294,7 +294,7 @@ def process_chapter(chapter, parse_func):
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
     soup = BeautifulSoup(read_file_contents(html_file))
     data = parse_func(soup, chapter)
-    write_json('{}.json'.format(chapter), data)
+    write_json(os.path.join(json_dir, '{}.json'.format(chapter)), data)
 
 
 def process_airport(airport):
@@ -326,7 +326,7 @@ def process_airports():
     for airport in airports:
         data.append(process_airport(airport))
 
-    write_json('airports.json', data)
+    write_json(os.path.join(json_dir, 'airports.json'), data)
 
 
 
@@ -336,7 +336,9 @@ def process_airports():
 
 version = '2015-04-30'
 html_dir = os.path.join('data', 'aip', version)
+json_dir = os.path.join('data', 'aip', 'json')
 ensure_dir(html_dir)
+ensure_dir(json_dir)
 
 process_chapters()
 process_airports()
