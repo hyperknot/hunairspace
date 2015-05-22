@@ -145,10 +145,16 @@ def parse_airport(soup, airport):
         if tds[1].text.strip() == 'Vertical limits':
             text = tds[2].text.strip()
             limit_lines = [l.strip() for l in text.splitlines() if l.strip()]
+            if airport == 'LHSM':
+                text = tds[3].text.strip()
+                limit_lines += [l.strip() for l in text.splitlines() if l.strip()]
 
         if tds[1].text.strip() == 'Designation and lateral limits':
             text = tds[2].text.strip()
             geom_lines = [l.strip() for l in text.splitlines() if l.strip()]
+            if airport == 'LHSM':
+                text = tds[3].text.strip()
+                geom_lines += [l.strip() for l in text.splitlines() if l.strip()]
 
     assert limit_lines and geom_lines
 
@@ -163,7 +169,7 @@ def parse_airport(soup, airport):
         data['class'] = get_class_from_name(data['name'])
         airspaces.append(data)
 
-    if airport == 'LHBP':
+    elif airport == 'LHBP':
         upper, lower = limit_lines[0].split('/ ')
         data = {
             'name': geom_lines[0],
@@ -175,7 +181,7 @@ def parse_airport(soup, airport):
         data['class'] = get_class_from_name(data['name'])
         airspaces.append(data)
 
-    if airport == 'LHDC':
+    elif airport == 'LHDC':
         for l in geom_lines:
             name, geom = l.split(u'\ufffd')
             limit = [ll.lstrip(name) for ll in limit_lines if ll.startswith(name)][0]
@@ -190,7 +196,7 @@ def parse_airport(soup, airport):
             data['class'] = get_class_from_name(data['name'])
             airspaces.append(data)
 
-    if airport == 'LHFM':
+    elif airport == 'LHFM':
         lower, upper = limit_lines[0].split(' to ')
         lower = lower.replace('SFC', 'GND')
         data = {
@@ -203,12 +209,66 @@ def parse_airport(soup, airport):
         data['class'] = get_class_from_name(data['name'])
         airspaces.append(data)
 
+    elif airport == 'LHNY':
+        upper, lower = limit_lines[0].split(' ALT ')
+        data = {
+            'name': geom_lines[0],
+            'geometry_raw': geom_lines[1],
+            'upper_raw': upper,
+            'lower_raw': lower,
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+    elif airport == 'LHPP' or airport == 'LHPR':
+
+        data = {
+            'name': geom_lines[0],
+            'geometry_raw': geom_lines[1],
+            'upper_raw': limit_lines[0],
+            'lower_raw': limit_lines[1],
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+    elif airport == 'LHSM':
+        # data 1
+        upper, lower = limit_lines[1].split(' / ')
+        data = {
+            'name': geom_lines[0],
+            'geometry_raw': geom_lines[1],
+            'upper_raw': upper,
+            'lower_raw': lower,
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+        # data 2
+        upper, lower = limit_lines[3].split(' / ')
+        data = {
+            'name': geom_lines[2],
+            'geometry_raw': geom_lines[3],
+            'upper_raw': upper,
+            'lower_raw': lower,
+            'notes': airport
+        }
+        data['class'] = get_class_from_name(data['name'])
+        airspaces.append(data)
+
+    else:
+        pp(geom_lines)
+        pp(limit_lines)
+        # raise ValueError('Unknown airport', airport)
+
 
     return airspaces
 
 
 def get_class_from_name(name):
-    classes = ['TIZ', 'MCTR', 'CTR', 'CTA', 'MTMA']
+    classes = ['MCTR', 'CTR', 'CTA', 'MTMA', 'TIZ']
     for c in classes:
         if c in name:
             return c
@@ -254,9 +314,9 @@ for chapter in process_lookup:
     process_chapter(chapter)
 
 # for airport in airports:
-    # print airport
-    # process_airport(airport)
-    # print '---'
+#     print airport
+#     process_airport(airport)
+#     print '---'
 
-process_airport('LHFM')
+process_airport('LHSM')
 
