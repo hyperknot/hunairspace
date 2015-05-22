@@ -167,7 +167,7 @@ def parse_airport(soup, airport):
                     if text == '2':
                         break
                     geom.append(' '.join([ntd.text.strip() for ntd in ntds[-2:]]))
-                geom_lines += [', '.join(geom)]
+                geom_lines.append(', '.join(geom))
 
 
     assert limit_lines and geom_lines
@@ -278,6 +278,7 @@ def parse_airport(soup, airport):
         raise ValueError('Unknown airport', airport)
 
     return airspaces
+
 
 def get_class_from_name(name):
     classes = ['MCTR', 'CTR', 'CTA', 'MTMA', 'TIZ']
