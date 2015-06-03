@@ -65,53 +65,29 @@ def calculate_border_between_points(point_a, point_b, border):
     dists = sorted([border.project(p) for p in [point_a, point_b]])
     points = [border.interpolate(d) for d in dists]
 
-    # precision errors need buffering of border
-    eps = 1.2e-10
+
+
+
+
+
+def cut_line(cut_point, line, eps=1.2e-10):
+    dist = line.project(cut_point)
+    point = line.interpolate(dist)
 
     coords = list(border.coords)
 
-    # if p in line
+    # if cut_point in coords
 
     for i, p in enumerate(coords[:-1]):
         line_segment = LineString([coords[i], coords[i + 1]])
         line_segment_buffer = line_segment.buffer(eps, resolution=1, cap_style=3)
-        if line_segment_buffer.contains(points[1]):
-            start_segment = LineString(coords[:i] + [p])
-            end_segment = LineString([p] + coords[i:])
+        if line_segment_buffer.contains(point):
+            start_segment = LineString(coords[:i] + [point])
+            end_segment = LineString([point] + coords[i:])
 
-            plot_line(border)
-            plot_line(start_segment)
-            plot_line(end_segment)
+            return start_segment, end_segment
 
-            return
-
-
-
-
-
-
-
-
-
-
-
-def cut(line, distance):
-    if distance <= 0.0 or distance >= line.length:
-        return [LineString(line)]
-    coords = list(line.coords)
-    for i, p in enumerate(coords):
-        pd = line.project(Point(p))
-        # print i, pd
-        if pd == distance:
-            return [
-                LineString(coords[:i + 1]),
-                LineString(coords[i:])]
-        if pd > distance:
-            cp = line.interpolate(distance)
-            return [
-                LineString(coords[:i] + [(cp.x, cp.y)]),
-                LineString([(cp.x, cp.y)] + coords[i:])]
-
+    raise Exception('point not found in line, consider raising eps')
 
 
 
