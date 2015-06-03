@@ -5,30 +5,14 @@ from .utils import beautify_html, write_file_contents, pp, write_json, ensure_di
     read_file_contents
 
 
-version = '2015-04-30'
-
-html_dir = os.path.join('data', 'aip', 'html')
-json_dir = os.path.join('data', 'aip', 'json')
-
-
 def process_chapters():
-    chapter_lookup = {
-        '2.1': parse_2,
-        '2.2': parse_2,
-        '5.1': parse_5,
-        '5.2': parse_5,
-        '5.5': parse_5,
-        '5.6': parse_5,
-    }
-
-    for chapter in chapter_lookup:
-        process_chapter(chapter, chapter_lookup[chapter])
+    for chapter in chapters:
+        data = process_chapter(chapter)
+        write_json(os.path.join(json_dir, '{}.json'.format(chapter)), data)
 
 
 def process_airports():
     ensure_dir(json_dir)
-
-    airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 
     data = list()
     for airport in airports:
@@ -37,16 +21,15 @@ def process_airports():
     write_json(os.path.join(json_dir, 'airports.json'), data)
 
 
-
-def process_chapter(chapter, parse_func):
+def process_chapter(chapter):
     ensure_dir(html_dir)
     ensure_dir(json_dir)
 
     download_chapter(chapter, html_dir)
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
     soup = BeautifulSoup(read_file_contents(html_file))
-    data = parse_func(soup, chapter)
-    write_json(os.path.join(json_dir, '{}.json'.format(chapter)), data)
+    data = chapters[chapter](soup, chapter)
+    return data
 
 
 def process_airport(airport):
@@ -369,3 +352,20 @@ def get_class_from_name(name):
     else:
         raise ValueError('No class found', name)
 
+
+
+version = '2015-04-30'
+
+html_dir = os.path.join('data', 'aip', 'html')
+json_dir = os.path.join('data', 'aip', 'json')
+
+airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
+
+chapters = {
+    '2.1': parse_2,
+    '2.2': parse_2,
+    '5.1': parse_5,
+    '5.2': parse_5,
+    '5.5': parse_5,
+    '5.6': parse_5,
+}
