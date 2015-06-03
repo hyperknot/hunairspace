@@ -87,13 +87,13 @@ def parse_2_td(td):
     parts = [l.strip() for l in td.text.splitlines() if l.strip()]
     data = dict()
     data['name'] = parts[0]
-    data['geometry_raw'] = parts[1]
+    data['geom_raw'] = parts[1]
     data['upper_raw'] = parts[2]
     data['lower_raw'] = parts[3]
     if len(parts) == 5:
         data['class'] = parts[4]
     if len(parts) > 5:
-        data['geometry_raw_and'] = parts[5]
+        data['geom_raw_and'] = parts[5]
         assert parts[6] == data['upper_raw']
         assert parts[7] == data['lower_raw']
     if 'class' not in data:
@@ -160,7 +160,7 @@ def parse_5126_tr(tr):
         if i == 0:
             assert len(parts) == 2
             data['name'] = parts[0]
-            data['geometry_raw'] = parts[1]
+            data['geom_raw'] = parts[1]
         if i == 1:
             assert len(parts) == 1
             assert len(parts[0].split('/')) == 2
@@ -182,7 +182,7 @@ def parse_55_tr(tr):
         if i == 0:
             assert len(parts) == 2
             data['name'] = parts[0]
-            data['geometry_raw'] = parts[1]
+            data['geom_raw'] = parts[1]
         if i == 1:
             if len(parts) == 3:
                 data['upper_raw'] = parts[0]
@@ -239,7 +239,7 @@ def parse_airport(soup, airport):
     if airport == 'LHBC':
         data = {
             'name': ' '.join(geom_lines[:2]),
-            'geometry_raw': geom_lines[2],
+            'geom_raw': geom_lines[2],
             'upper_raw': limit_lines[0].rstrip(' /'),
             'lower_raw': limit_lines[1],
             'notes': airport
@@ -251,7 +251,7 @@ def parse_airport(soup, airport):
         upper, lower = limit_lines[0].split('/ ')
         data = {
             'name': geom_lines[0],
-            'geometry_raw': geom_lines[1],
+            'geom_raw': geom_lines[1],
             'upper_raw': upper,
             'lower_raw': lower,
             'notes': airport
@@ -266,7 +266,7 @@ def parse_airport(soup, airport):
             upper, lower = limit.split(' / ')
             data = {
                 'name': name,
-                'geometry_raw': geom,
+                'geom_raw': geom,
                 'upper_raw': upper,
                 'lower_raw': lower,
                 'notes': airport
@@ -279,7 +279,7 @@ def parse_airport(soup, airport):
         lower = lower.replace('SFC', 'GND')
         data = {
             'name': geom_lines[0],
-            'geometry_raw': geom_lines[1],
+            'geom_raw': geom_lines[1],
             'upper_raw': upper,
             'lower_raw': lower,
             'notes': airport
@@ -291,7 +291,7 @@ def parse_airport(soup, airport):
         upper, lower = limit_lines[0].split(' ALT ')
         data = {
             'name': geom_lines[0],
-            'geometry_raw': geom_lines[1],
+            'geom_raw': geom_lines[1],
             'upper_raw': upper,
             'lower_raw': lower,
             'notes': airport
@@ -303,7 +303,7 @@ def parse_airport(soup, airport):
 
         data = {
             'name': geom_lines[0],
-            'geometry_raw': geom_lines[1],
+            'geom_raw': geom_lines[1],
             'upper_raw': limit_lines[0],
             'lower_raw': limit_lines[1],
             'notes': airport
@@ -316,7 +316,7 @@ def parse_airport(soup, airport):
         upper, lower = limit_lines[1].split(' / ')
         data = {
             'name': geom_lines[0],
-            'geometry_raw': geom_lines[1],
+            'geom_raw': geom_lines[1],
             'upper_raw': upper,
             'lower_raw': lower,
             'notes': airport
@@ -328,7 +328,7 @@ def parse_airport(soup, airport):
         upper, lower = limit_lines[3].split(' / ')
         data = {
             'name': geom_lines[2],
-            'geometry_raw': geom_lines[3],
+            'geom_raw': geom_lines[3],
             'upper_raw': upper,
             'lower_raw': lower,
             'notes': airport

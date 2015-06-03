@@ -63,3 +63,5 @@ def pp(data):
     print json.dumps(data, indent=2, ensure_ascii=False, sort_keys=True)
 
 
+def convert_dms_to_float(deg, min, sec, sign=1):
+    return sign * deg + min / 60. + sec / 3600.

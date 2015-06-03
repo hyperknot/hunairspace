@@ -1,7 +1,7 @@
 [
   {
     "class": "P", 
-    "geometry_raw": "A circle with radius of 3 KM centred on 463443N 0185110E", 
+    "geom_raw": "A circle with radius of 3 KM centred on 463443N 0185110E", 
     "lower_raw": "GND", 
     "name": "LHP1 / PAKS", 
     "notes": "H24\nNuclear Power Plant", 
@@ -9,7 +9,7 @@
   }, 
   {
     "class": "P", 
-    "geometry_raw": "A circle with radius of 0.5 KM centred on 472923N 0185708E", 
+    "geom_raw": "A circle with radius of 0.5 KM centred on 472923N 0185708E", 
     "lower_raw": "GND", 
     "name": "LHP2 / CSILLEBÉRC", 
     "notes": "H24\nResearch nuclear reactor", 
@@ -17,7 +17,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "473059N 0185828E - 473055N 0190118E - 473054N 0190159E - 473053N 0190237E - 473038N 0190321E - 473022N 0190325E - 472941N 0190336E - 472859N 0190147E - 472910N 0190047E - 472931N 0185846E - 473002N 0185812E - 473059N 0185828E", 
+    "geom_raw": "473059N 0185828E - 473055N 0190118E - 473054N 0190159E - 473053N 0190237E - 473038N 0190321E - 473022N 0190325E - 472941N 0190336E - 472859N 0190147E - 472910N 0190047E - 472931N 0185846E - 473002N 0185812E - 473059N 0185828E", 
     "lower_raw": "GND", 
     "name": "LHR1 / BUDAPEST", 
     "notes": "H24\nBy special permission of the aeronautical authority", 
@@ -25,7 +25,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "473154N 0185620E - 473154N 0185756E - 473121N 0185756E - 473121N 0185620E - 473154N 0185620E", 
+    "geom_raw": "473154N 0185620E - 473154N 0185756E - 473121N 0185756E - 473121N 0185620E - 473154N 0185620E", 
     "lower_raw": "GND", 
     "name": "LHR1A / BUDAPEST", 
     "notes": "H24\nBy special permission of the aeronautical authority", 
@@ -33,7 +33,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 470503N 0180254E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 470503N 0180254E", 
     "lower_raw": "GND", 
     "name": "LHR3 / BALATONFŰZFŐ", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -41,7 +41,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 1 KM centred on 464816N 0163720E", 
+    "geom_raw": "A circle with a radius of 1 KM centred on 464816N 0163720E", 
     "lower_raw": "GND", 
     "name": "LHR4 / ZALAEGERSZEG", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -49,7 +49,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 472508N 0170055E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 472508N 0170055E", 
     "lower_raw": "GND", 
     "name": "LHR5 / RÉPCELAK", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -57,7 +57,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 471702N 0185358E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 471702N 0185358E", 
     "lower_raw": "GND", 
     "name": "LHR6 / SZÁZHALOMBATTA", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -65,7 +65,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2.5 KM centred on 481429N 0203956E", 
+    "geom_raw": "A circle with a radius of 2.5 KM centred on 481429N 0203956E", 
     "lower_raw": "GND", 
     "name": "LHR8 / KAZINCBARCIKA", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -73,7 +73,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 3 KM centred on 475413N 0210134E", 
+    "geom_raw": "A circle with a radius of 3 KM centred on 475413N 0210134E", 
     "lower_raw": "GND", 
     "name": "LHR9 / TISZAÚJVÁROS", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -81,7 +81,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 5 KM centred on 473154N 0212253E", 
+    "geom_raw": "A circle with a radius of 5 KM centred on 473154N 0212253E", 
     "lower_raw": "GND", 
     "name": "LHR10 / HAJDÚSZOBOSZLÓ", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -89,7 +89,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 1.5 KM centred on 475703N 0212153E", 
+    "geom_raw": "A circle with a radius of 1.5 KM centred on 475703N 0212153E", 
     "lower_raw": "GND", 
     "name": "LHR11 / TISZAVASVÁRI", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -97,7 +97,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 1.5 KM centred on 481003N 0204253E", 
+    "geom_raw": "A circle with a radius of 1.5 KM centred on 481003N 0204253E", 
     "lower_raw": "GND", 
     "name": "LHR12 / SAJÓBÁBONY", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -105,7 +105,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 3 KM centred on 461904N 0201246E", 
+    "geom_raw": "A circle with a radius of 3 KM centred on 461904N 0201246E", 
     "lower_raw": "GND", 
     "name": "LHR14 / ALGYŐ", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -113,7 +113,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 465703N 0185554E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 465703N 0185554E", 
     "lower_raw": "GND", 
     "name": "LHR15 / DUNAÚJVÁROS", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -121,7 +121,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 470804N 0200753E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 470804N 0200753E", 
     "lower_raw": "GND", 
     "name": "LHR16 / SZOLNOK-TÓSZEG", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -129,7 +129,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 471003N 0180824E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 471003N 0180824E", 
     "lower_raw": "GND", 
     "name": "LHR22 / PÉT", 
     "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
@@ -137,7 +137,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2.5 KM centred on 480150N 0213827E", 
+    "geom_raw": "A circle with a radius of 2.5 KM centred on 480150N 0213827E", 
     "lower_raw": "GND", 
     "name": "LHR29 / NYÍRTELEK", 
     "notes": "H24\nFor civil aircraft", 
@@ -145,7 +145,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 473846N 0214451E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 473846N 0214451E", 
     "lower_raw": "GND", 
     "name": "LHR30 / HAJDÚSÁMSON", 
     "notes": "H24\nFor civil aircraft", 
@@ -153,7 +153,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 474000N 0201629E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 474000N 0201629E", 
     "lower_raw": "GND", 
     "name": "LHR31 / HEVES-ALATKA", 
     "notes": "H24\nFor civil aircraft", 
@@ -161,7 +161,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 474444N 0190831E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 474444N 0190831E", 
     "lower_raw": "GND", 
     "name": "LHR32 / VÁC-DERECSKEDŰLŐ", 
     "notes": "H24\nFor civil aircraft.", 
@@ -169,7 +169,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 465554N 0193555E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 465554N 0193555E", 
     "lower_raw": "GND", 
     "name": "LHR33 / HETÉNYEGYHÁZA", 
     "notes": "H24\nFor civil aircraft.", 
@@ -177,7 +177,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "470627N 0192534E - 470317N 0192426E - 470233N 0192733E - 470548N 0192848E - 470627N 0192534E", 
+    "geom_raw": "470627N 0192534E - 470317N 0192426E - 470233N 0192733E - 470548N 0192848E - 470627N 0192534E", 
     "lower_raw": "GND", 
     "name": "LHR34 / TÁBORFALVA", 
     "notes": "H24\nFor civil aircraft.", 
@@ -185,7 +185,7 @@
   }, 
   {
     "class": "R", 
-    "geometry_raw": "A circle with a radius of 2.5 KM centred on 470957N 0192806E", 
+    "geom_raw": "A circle with a radius of 2.5 KM centred on 470957N 0192806E", 
     "lower_raw": "GND", 
     "name": "LHR35 / PUSZTAVACS", 
     "notes": "H24\nFor civil aircraft.", 
@@ -193,7 +193,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "470903N 0175624E - 470903N 0180054E - 471003N 0180354E - 471233N 0180654E - 471503N 0180154E - 471133N 0175554E - 470903N 0175624E", 
+    "geom_raw": "470903N 0175624E - 470903N 0180054E - 471003N 0180354E - 471233N 0180654E - 471503N 0180154E - 471133N 0175554E - 470903N 0175624E", 
     "lower_raw": "GND", 
     "name": "LHD2A / HAJMÁSKÉR", 
     "notes": "NOTAM\nFiring field", 
@@ -201,7 +201,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "471623N 0181254E - 471533N 0180324E - 471233N 0180654E - 471233N 0181454E - 471503N 0181654E - 471623N 0181254E", 
+    "geom_raw": "471623N 0181254E - 471533N 0180324E - 471233N 0180654E - 471233N 0181454E - 471503N 0181654E - 471623N 0181254E", 
     "lower_raw": "GND", 
     "name": "LHD2B / VÁRPALOTA", 
     "notes": "NOTAM\nFiring field", 
@@ -209,7 +209,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "471200N 0191246E - 471101N 0191132E - 470924N 0191132E - 470909N 0191145E - 470427N 0192615E - 470456N 0192701E - 470735N 0192306E - 471200N 0191246E", 
+    "geom_raw": "471200N 0191246E - 471101N 0191132E - 470924N 0191132E - 470909N 0191145E - 470427N 0192615E - 470456N 0192701E - 470735N 0192306E - 471200N 0191246E", 
     "lower_raw": "GND", 
     "name": "LHD3 / TATÁRSZENTGYÖRGY", 
     "notes": "NOTAM\nFiring field", 
@@ -217,7 +217,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "462804N 0200554E - 462704N 0200624E - 462804N 0201024E - 462924N 0200934E - 462804N 0200554E", 
+    "geom_raw": "462804N 0200554E - 462704N 0200624E - 462804N 0201024E - 462924N 0200934E - 462804N 0200554E", 
     "lower_raw": "GND", 
     "name": "LHD11 / DÓC", 
     "notes": "NOTAM\nFiring field", 
@@ -225,7 +225,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "474104N 0214053E - 474004N 0214623E - 474304N 0214553E - 474304N 0214223E - 474104N 0214053E", 
+    "geom_raw": "474104N 0214053E - 474004N 0214623E - 474304N 0214553E - 474304N 0214223E - 474104N 0214053E", 
     "lower_raw": "GND", 
     "name": "LHD14 / HAJDÚHADHÁZ", 
     "notes": "NOTAM\nFiring field", 
@@ -233,7 +233,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "475633N 0201753E - 475633N 0201953E - 475903N 0201923E - 480003N 0201623E - 475633N 0201753E", 
+    "geom_raw": "475633N 0201753E - 475633N 0201953E - 475903N 0201923E - 480003N 0201623E - 475633N 0201753E", 
     "lower_raw": "GND", 
     "name": "LHD15 / EGERBAKTA", 
     "notes": "MOFRI 0500 (UTCW) - 2100 (UTCW)\nFiring field", 
@@ -241,7 +241,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "474233N 0190024E - 474233N 0185654E - 474033N 0185824E - 474233N 0190024E", 
+    "geom_raw": "474233N 0190024E - 474233N 0185654E - 474033N 0185824E - 474233N 0190024E", 
     "lower_raw": "GND", 
     "name": "LHD16 / IZBÉG", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -249,7 +249,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "474304N 0174554E - 474103N 0174554E - 474203N 0175154E - 474343N 0174854E - 474304N 0174554E", 
+    "geom_raw": "474304N 0174554E - 474103N 0174554E - 474203N 0175154E - 474343N 0174854E - 474304N 0174554E", 
     "lower_raw": "GND", 
     "name": "LHD17 / GYŐRSZENTIVÁN", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -257,7 +257,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "464134N 0191154E - 464404N 0190824E - 463634N 0190824E - 463404N 0191154E - 464134N 0191154E", 
+    "geom_raw": "464134N 0191154E - 464404N 0190824E - 463634N 0190824E - 463404N 0191154E - 464134N 0191154E", 
     "lower_raw": "GND", 
     "name": "LHD18 / CSORNA/AKASZTÓ", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -265,7 +265,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "474103N 0182154E - 473803N 0182554E - 474203N 0182624E - 474233N 0182254E - 474103N 0182154E", 
+    "geom_raw": "474103N 0182154E - 473803N 0182554E - 474203N 0182624E - 474233N 0182254E - 474103N 0182154E", 
     "lower_raw": "GND", 
     "name": "LHD21 / SZOMOD", 
     "notes": "NOTAM\nFiring field", 
@@ -273,7 +273,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "462134N 0175055E - 461804N 0174955E - 461834N 0175225E - 462034N 0175225E - 462134N 0175055E", 
+    "geom_raw": "462134N 0175055E - 461804N 0174955E - 461834N 0175225E - 462034N 0175225E - 462134N 0175055E", 
     "lower_raw": "GND", 
     "name": "LHD24 / SÁNTOS", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -281,7 +281,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "474533N 0192054E - 474803N 0191454E - 474703N 0191254E - 474533N 0192054E", 
+    "geom_raw": "474533N 0192054E - 474803N 0191454E - 474703N 0191254E - 474533N 0192054E", 
     "lower_raw": "GND", 
     "name": "LHD29 / PÜSPÖKSZILÁGY", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -289,7 +289,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "472633N 0184454E - 472403N 0184854E - 472703N 0184754E - 472703N 0184624E - 472633N 0184454E", 
+    "geom_raw": "472633N 0184454E - 472403N 0184854E - 472703N 0184754E - 472703N 0184624E - 472633N 0184454E", 
     "lower_raw": "GND", 
     "name": "LHD30 / ÉRD", 
     "notes": "NOTAM\nFiring field", 
@@ -297,7 +297,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "464204N 0190124E - 463904N 0190424E - 464104N 0190954E - 464434N 0190624E - 464204N 0190124E", 
+    "geom_raw": "464204N 0190124E - 463904N 0190424E - 464104N 0190954E - 464434N 0190624E - 464204N 0190124E", 
     "lower_raw": "GND", 
     "name": "LHD33 / ÁLLAMPUSZTA", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -305,7 +305,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "475603N 0184954E - 475302N 0184554E - 475203N 0185154E - 475303N 0185554E - 475603N 0185354E - 475603N 0184954E", 
+    "geom_raw": "475603N 0184954E - 475302N 0184554E - 475203N 0185154E - 475303N 0185554E - 475603N 0185354E - 475603N 0184954E", 
     "lower_raw": "GND", 
     "name": "LHD34 / MÁRIANOSZTRA", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -313,7 +313,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "470743N 0174825E - 470903N 0175624E - 471103N 0180654E - 471503N 0180154E - 471633N 0175754E - 471403N 0174654E - 470743N 0174825E", 
+    "geom_raw": "470743N 0174825E - 470903N 0175624E - 471103N 0180654E - 471503N 0180154E - 471633N 0175754E - 471403N 0174654E - 470743N 0174825E", 
     "lower_raw": "GND", 
     "name": "LHD36A / HAJMÁSKÉR", 
     "notes": "NOTAM\nFiring field", 
@@ -321,7 +321,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "471003N 0180354E - 470933N 0181924E - 471933N 0181654E - 471833N 0175954E - 471003N 0180354E", 
+    "geom_raw": "471003N 0180354E - 470933N 0181924E - 471933N 0181654E - 471833N 0175954E - 471003N 0180354E", 
     "lower_raw": "GND", 
     "name": "LHD36B / VÁRPALOTA", 
     "notes": "NOTAM\nFiring field", 
@@ -329,7 +329,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "464503N 0183224E - 464203N 0183054E - 464333N 0183354E - 464503N 0183224E", 
+    "geom_raw": "464503N 0183224E - 464203N 0183054E - 464333N 0183354E - 464503N 0183224E", 
     "lower_raw": "GND", 
     "name": "LHD37 / SIMONTORNYA", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -337,7 +337,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 481703N 0215422E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 481703N 0215422E", 
     "lower_raw": "GND", 
     "name": "LHD39 / CIGÁND", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -345,7 +345,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 473903N 0163355E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 473903N 0163355E", 
     "lower_raw": "GND", 
     "name": "LHD50 / HARKA", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -353,7 +353,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 472333N 0163455E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 472333N 0163455E", 
     "lower_raw": "GND", 
     "name": "LHD52 / KŐSZEG", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -361,7 +361,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 465903N 0163455E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 465903N 0163455E", 
     "lower_raw": "GND", 
     "name": "LHD53 / NÁDASD", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
@@ -369,7 +369,7 @@
   }, 
   {
     "class": "D", 
-    "geometry_raw": "A circle with a radius of 2 KM centred on 480403N 0191953E", 
+    "geom_raw": "A circle with a radius of 2 KM centred on 480403N 0191953E", 
     "lower_raw": "GND", 
     "name": "LHD55 / SZÜGY", 
     "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 

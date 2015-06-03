@@ -1,7 +1,7 @@
 [
   {
     "class": "SA", 
-    "geometry_raw": "472633N 0184454E  - 472403N 0184854E  - 472703N 0184754E  - 472703N 0184624E  - 472633N 0184454E", 
+    "geom_raw": "472633N 0184454E  - 472403N 0184854E  - 472703N 0184754E  - 472703N 0184624E  - 472633N 0184454E", 
     "lower_raw": "3000 FT ALT", 
     "name": "LHSA1 / AEROBATICS AREA1", 
     "notes": "Working day 08:00 (UTCW) - 17:00 (UTCW)\nSat 08:00 (UTCW) - 11:00 (UTCW)\nSat 14:00 (UTCW) - 17:00 (UTCW)\nHOL 14:00 (UTCW) - 17:00 (UTCW)\nSun 14:00 (UTCW) - 17:00 (UTCW)\nHOL 08:00 (UTCW) - 11:00 (UTCW)\nSun 08:00 (UTCW) - 11:00 (UTCW)\nAbove 3000 FT AMSL prior permission required by Budapest ATS Centre.\nNot available when LH-D30 activated\nClass: G", 
@@ -9,7 +9,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "473720N 0185425E  - 473302N 0185909E  - 473220N 0185858E  - 473500N 0185300E  - 473720N 0185425E", 
+    "geom_raw": "473720N 0185425E  - 473302N 0185909E  - 473220N 0185858E  - 473500N 0185300E  - 473720N 0185425E", 
     "lower_raw": "GND", 
     "name": "LHSG1 / GLIDER AREA1", 
     "notes": "HX\nOnly for VFR flights.\nAbove 2500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -17,7 +17,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
+    "geom_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
     "lower_raw": "GND", 
     "name": "LHSG2S / GLIDER AREA2/S", 
     "notes": "HX\nOnly for VFR flights.\nAbove 3500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -25,7 +25,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
+    "geom_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
     "lower_raw": "GND", 
     "name": "LHSG2V / GLIDER AREA2/V", 
     "notes": "HX\nOnly for VFR flights.\nAbove 3500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -33,7 +33,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "473328N 0184606E  - 472636N 0185717E  - 472519N 0185531E  - 472516N 0185346E  - 473233N 0184156E  - 473328N 0184606E", 
+    "geom_raw": "473328N 0184606E  - 472636N 0185717E  - 472519N 0185531E  - 472516N 0185346E  - 473233N 0184156E  - 473328N 0184606E", 
     "lower_raw": "GND", 
     "name": "LHSG3 / GLIDER AREA3", 
     "notes": "HX\nOnly for VFR flights.\nAbove 4500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -41,7 +41,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "474527N 0183705E  - 473722N 0184005E  - 474723N 0185152E  - 474750N 0184351E along border HUNGARY_SLOVAKREPUBLIC - 474527N 0183705E", 
+    "geom_raw": "474527N 0183705E  - 473722N 0184005E  - 474723N 0185152E  - 474750N 0184351E along border HUNGARY_SLOVAKREPUBLIC - 474527N 0183705E", 
     "lower_raw": "GND", 
     "name": "LHSG10 / GLIDER AREA10", 
     "notes": "HX\nAvailable only for VFR flights\nAbove 4500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -49,7 +49,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "473900N 0190300E  - 473800N 0192100E  - 473600N 0191030E  - 473700N 0190400E  - 473900N 0190300E", 
+    "geom_raw": "473900N 0190300E  - 473800N 0192100E  - 473600N 0191030E  - 473700N 0190400E  - 473900N 0190300E", 
     "lower_raw": "GND", 
     "name": "LHSG20 / GLIDER AREA20", 
     "notes": "HX\nAvailable only for VFR flights.\nAbove 2000 FT AMSL prior permission required by Budapest ATS Centre.\nClass:G", 
@@ -57,7 +57,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "A circle radius 2 KM centered on 473704N 0190836E", 
+    "geom_raw": "A circle radius 2 KM centered on 473704N 0190836E", 
     "lower_raw": "2000 FT ALT", 
     "name": "LHSG20A / GLIDER AREA20A", 
     "notes": "HX\nAbove 2000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -65,7 +65,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "474100N 0190430E  - 473948N 0194515E  - 473800N 0192100E  - 473900N 0190300E  - 474100N 0190430E", 
+    "geom_raw": "474100N 0190430E  - 473948N 0194515E  - 473800N 0192100E  - 473900N 0190300E  - 474100N 0190430E", 
     "lower_raw": "GND", 
     "name": "LHSG21 / GLIDER AREA21", 
     "notes": "HX\nAvailable only for VFR flights\nAbove 2500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -73,7 +73,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "474636N 0190905E  - 474503N 0194053E  - 473948N 0194515E  - 474100N 0190430E  - 474636N 0190905E", 
+    "geom_raw": "474636N 0190905E  - 474503N 0194053E  - 473948N 0194515E  - 474100N 0190430E  - 474636N 0190905E", 
     "lower_raw": "GND", 
     "name": "LHSG22 / GLIDER AREA22", 
     "notes": "HX\nAvailable only for VFR flights.\nAbove 3000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -81,7 +81,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "475547N 0193148E  - 474503N 0194053E  - 474636N 0190905E  - 475547N 0193148E", 
+    "geom_raw": "475547N 0193148E  - 474503N 0194053E  - 474636N 0190905E  - 475547N 0193148E", 
     "lower_raw": "GND", 
     "name": "LHSG23 / GLIDER AREA23", 
     "notes": "HX\nAvailable only for VFR flights.\nAbove 6500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
@@ -89,7 +89,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "474946N 0185738E  - 474340N 0191445E  - 473900N 0190300E  - 474946N 0185738E", 
+    "geom_raw": "474946N 0185738E  - 474340N 0191445E  - 473900N 0190300E  - 474946N 0185738E", 
     "lower_raw": "GND", 
     "name": "LHSG24 / GLIDER AREA24", 
     "notes": "HX\nPrior permission required by Budapest ATS Centre.\nMountain wave glider flights.\nClass: G", 
@@ -97,7 +97,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "480000N 0190800E  - 474340N 0191445E  - 474946N 0185738E  - 475300N 0185600E  - 480000N 0190800E", 
+    "geom_raw": "480000N 0190800E  - 474340N 0191445E  - 474946N 0185738E  - 475300N 0185600E  - 480000N 0190800E", 
     "lower_raw": "GND", 
     "name": "LHSG25 / GLIDER AREA25", 
     "notes": "HX\nPrior permission required by Budapest ATS Centre.\nMountain wave glider flights.\nClass: G", 
@@ -105,7 +105,7 @@
   }, 
   {
     "class": "G", 
-    "geometry_raw": "475730N 0194200E  - 475700N 0200120E  - 475000N 0200700E  - 474430N 0194600E  - 474930N 0193830E  - 475730N 0194200E", 
+    "geom_raw": "475730N 0194200E  - 475700N 0200120E  - 475000N 0200700E  - 474430N 0194600E  - 474930N 0193830E  - 475730N 0194200E", 
     "lower_raw": "GND", 
     "name": "LHSG30 / GLIDER AREA30", 
     "notes": "15 SEP-15 MAY: ANY SR - SS\nAvailable only for VFR flights.\nPrior permission required by Budapest ATS Centre.\nMountain wave glider flights.\nClass: G", 
@@ -113,7 +113,7 @@
   }, 
   {
     "class": "SA", 
-    "geometry_raw": "A circle radius 3.15 KM centered on 472037N 0185909E", 
+    "geom_raw": "A circle radius 3.15 KM centered on 472037N 0185909E", 
     "lower_raw": "3500 FT ALT", 
     "name": "LHSDZLHTL / TOKOL", 
     "notes": "HX\nClass: G", 
@@ -121,7 +121,7 @@
   }, 
   {
     "class": "SA", 
-    "geometry_raw": "A circle radius 11.11 KM centered on 465119N 0180551E", 
+    "geom_raw": "A circle radius 11.11 KM centered on 465119N 0180551E", 
     "lower_raw": "GND", 
     "name": "LHSDZLHSK / KILITY SKYDIVE BALATON", 
     "notes": "HX\nClass: G", 

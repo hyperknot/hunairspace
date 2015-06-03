@@ -1,7 +1,7 @@
 [
   {
     "class": "B", 
-    "geometry_raw": "471843N 0191007E  - 471740N 0191339E  - 471451N 0191910E  - 471250N 0191626E  - 471843N 0191007E", 
+    "geom_raw": "471843N 0191007E  - 471740N 0191339E  - 471451N 0191910E  - 471250N 0191626E  - 471843N 0191007E", 
     "lower_raw": "GND", 
     "name": "LHB01 / ÓCSA", 
     "notes": "H24\nSensitive fauna", 
@@ -9,7 +9,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "470818N 0200133E  - 470625N 0200713E  - 470241N 0200428E  - 470154N 0200920E  - 465802N 0200304E  - 470304N 0195208E  - 470818N 0200133E", 
+    "geom_raw": "470818N 0200133E  - 470625N 0200713E  - 470241N 0200428E  - 470154N 0200920E  - 465802N 0200304E  - 470304N 0195208E  - 470818N 0200133E", 
     "lower_raw": "GND", 
     "name": "LHB02 / TÓSZEG", 
     "notes": "H24\nSensitive fauna", 
@@ -17,7 +17,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "483427N 0205016E  - 482446N 0204350E  - 482555N 0202607E along border HUNGARY_SLOVAKREPUBLIC - 483427N 0205016E", 
+    "geom_raw": "483427N 0205016E  - 482446N 0204350E  - 482555N 0202607E along border HUNGARY_SLOVAKREPUBLIC - 483427N 0205016E", 
     "lower_raw": "GND", 
     "name": "LHB03 / AGGTELEK", 
     "notes": "H24\nSensitive fauna", 
@@ -25,7 +25,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 13 KM centered on 482530N 0212451E", 
+    "geom_raw": "A circle radius 13 KM centered on 482530N 0212451E", 
     "lower_raw": "GND", 
     "name": "LHB04 / ZEMPLÉNI HG.", 
     "notes": "H24\nSensitive fauna", 
@@ -33,7 +33,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474156N 0204928E  - 473325N 0204342E  - 473531N 0203543E  - 474155N 0204322E  - 474156N 0204928E", 
+    "geom_raw": "474156N 0204928E  - 473325N 0204342E  - 473531N 0203543E  - 474155N 0204322E  - 474156N 0204928E", 
     "lower_raw": "GND", 
     "name": "LHB05 / HEVESI FÜVES PUSZTÁK 1. TISZA-TÓ", 
     "notes": "H24\nSensitive fauna", 
@@ -41,7 +41,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474826N 0210041E  - 474158N 0205911E  - 472841N 0203520E  - 472648N 0202534E  - 472723N 0201344E  - 474430N 0201528E  - 474504N 0203314E  - 475318N 0204737E  - 474826N 0210041E", 
+    "geom_raw": "474826N 0210041E  - 474158N 0205911E  - 472841N 0203520E  - 472648N 0202534E  - 472723N 0201344E  - 474430N 0201528E  - 474504N 0203314E  - 475318N 0204737E  - 474826N 0210041E", 
     "lower_raw": "GND", 
     "name": "LHB06A / HEVESI FÜVES PUSZTÁK 2/A", 
     "notes": "02 MAR-31 JUL: Mon 00:00 (UTCW) - Sun 24:00 (UTCW)\nSensitive fauna", 
@@ -49,7 +49,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474826N 0210041E  - 474158N 0205911E  - 472841N 0203520E  - 472648N 0202534E  - 472723N 0201344E  - 474430N 0201528E  - 474504N 0203314E  - 475318N 0204737E  - 474826N 0210041E", 
+    "geom_raw": "474826N 0210041E  - 474158N 0205911E  - 472841N 0203520E  - 472648N 0202534E  - 472723N 0201344E  - 474430N 0201528E  - 474504N 0203314E  - 475318N 0204737E  - 474826N 0210041E", 
     "lower_raw": "GND", 
     "name": "LHB06B / HEVESI FÜVES PUSZTÁK 2/B", 
     "notes": "01 AUG-01 MAR: Mon 00:00 (UTCW) - Sun 24:00 (UTCW)\nSensitive fauna", 
@@ -57,7 +57,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474718N 0210751E  - 474200N 0212540E  - 471839N 0210656E  - 472500N 0204402E  - 474718N 0210751E", 
+    "geom_raw": "474718N 0210751E  - 474200N 0212540E  - 471839N 0210656E  - 472500N 0204402E  - 474718N 0210751E", 
     "lower_raw": "GND", 
     "name": "LHB07 / HORTOBÁGY", 
     "notes": "H24\nSensitive fauna", 
@@ -65,7 +65,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "471154N 0212611E  - 471037N 0214022E  - 471827N 0213052E  - 471831N 0212135E  - 471154N 0212611E", 
+    "geom_raw": "471154N 0212611E  - 471037N 0214022E  - 471827N 0213052E  - 471831N 0212135E  - 471154N 0212611E", 
     "lower_raw": "GND", 
     "name": "LHB08 / BIHARI SÍK I", 
     "notes": "H24\nSensitive fauna", 
@@ -73,7 +73,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "471834N 0211342E  - 470119N 0211405E  - 470043N 0213135E  - 470922N 0214153E  - 471037N 0214022E  - 471154N 0212611E  - 471831N 0212135E  - 471834N 0211342E", 
+    "geom_raw": "471834N 0211342E  - 470119N 0211405E  - 470043N 0213135E  - 470922N 0214153E  - 471037N 0214022E  - 471154N 0212611E  - 471831N 0212135E  - 471834N 0211342E", 
     "lower_raw": "GND", 
     "name": "LHB09 / BIHARI SÍK II", 
     "notes": "H24\nSensitive fauna", 
@@ -81,7 +81,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "464459N 0195832E  - 464131N 0201302E  - 462310N 0201739E  - 462338N 0195959E  - 463254N 0195304E  - 463723N 0195943E  - 463547N 0195107E  - 464459N 0195832E", 
+    "geom_raw": "464459N 0195832E  - 464131N 0201302E  - 462310N 0201739E  - 462338N 0195959E  - 463254N 0195304E  - 463723N 0195943E  - 463547N 0195107E  - 464459N 0195832E", 
     "lower_raw": "GND", 
     "name": "LHB10 / ALSÓ-TISZA-VÖLGY", 
     "notes": "H24\nSensitive fauna", 
@@ -89,7 +89,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 2 KM centered on 462043N 0203820E", 
+    "geom_raw": "A circle radius 2 KM centered on 462043N 0203820E", 
     "lower_raw": "GND", 
     "name": "LHB11 / CSANÁDI PUSZTÁK", 
     "notes": "H24\nSensitive fauna", 
@@ -97,7 +97,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 4 KM centered on 462824N 0203744E", 
+    "geom_raw": "A circle radius 4 KM centered on 462824N 0203744E", 
     "lower_raw": "GND", 
     "name": "LHB12 / KARDOSKÚT", 
     "notes": "H24\nSensitive fauna", 
@@ -105,7 +105,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "462317N 0184615E  - 462015N 0185620E  - 461526N 0185503E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E  - 461854N 0185033E  - 462202N 0184439E  - 462317N 0184615E", 
+    "geom_raw": "462317N 0184615E  - 462015N 0185620E  - 461526N 0185503E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E  - 461854N 0185033E  - 462202N 0184439E  - 462317N 0184615E", 
     "lower_raw": "GND", 
     "name": "LHB13 / GEMENC", 
     "notes": "H24\nSensitive fauna", 
@@ -113,7 +113,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 1.5 KM centered on 464853N 0172410E", 
+    "geom_raw": "A circle radius 1.5 KM centered on 464853N 0172410E", 
     "lower_raw": "GND", 
     "name": "LHB14 / TAPOLCAI-MEDENCE", 
     "notes": "H24\nSensitive fauna", 
@@ -121,7 +121,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "465530N 0175103E  - 465546N 0175218E  - 465521N 0175341E  - 465418N 0175421E  - 465337N 0175236E  - 465425N 0175132E  - 465530N 0175103E", 
+    "geom_raw": "465530N 0175103E  - 465546N 0175218E  - 465521N 0175341E  - 465418N 0175421E  - 465337N 0175236E  - 465425N 0175132E  - 465530N 0175103E", 
     "lower_raw": "GND", 
     "name": "LHB15 / TIHANY", 
     "notes": "H24\nSensitive fauna", 
@@ -129,7 +129,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "465825N 0161637E  - 465952N 0163907E  - 464323N 0163210E  - 464252N 0162223E along border HUNGARY_SLOVENIA - 465208.62N 0160649.92E along border AUSTRIA_HUNGARY - 465825N 0161637E", 
+    "geom_raw": "465825N 0161637E  - 465952N 0163907E  - 464323N 0163210E  - 464252N 0162223E along border HUNGARY_SLOVENIA - 465208.62N 0160649.92E along border AUSTRIA_HUNGARY - 465825N 0161637E", 
     "lower_raw": "GND", 
     "name": "LHB16 / ŐRSEG", 
     "notes": "H24\nSensitive fauna", 
@@ -137,7 +137,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "470149N 0183222E  - 464813N 0184116E  - 464653N 0183553E  - 470059N 0182606E  - 470149N 0183222E", 
+    "geom_raw": "470149N 0183222E  - 464813N 0184116E  - 464653N 0183553E  - 470059N 0182606E  - 470149N 0183222E", 
     "lower_raw": "GND", 
     "name": "LHB17 / SÁRVÍZ VÖLGYE", 
     "notes": "H24\nSensitive fauna", 
@@ -145,7 +145,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "473831N 0165158E  - 473630N 0164330E  - 473315N 0164313E then a clockwise arc radius 7.6 KM centered on 473641N 0164632E  - 473831N 0165158E", 
+    "geom_raw": "473831N 0165158E  - 473630N 0164330E  - 473315N 0164313E then a clockwise arc radius 7.6 KM centered on 473641N 0164632E  - 473831N 0165158E", 
     "lower_raw": "GND", 
     "name": "LHB18 / FERTŐ", 
     "notes": "H24\nSensitive fauna", 
@@ -153,7 +153,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474358N 0183115E  - 473415N 0183129E  - 473409N 0182237E  - 474338N 0181731E  - 474358N 0183115E", 
+    "geom_raw": "474358N 0183115E  - 473415N 0183129E  - 473409N 0182237E  - 474338N 0181731E  - 474358N 0183115E", 
     "lower_raw": "GND", 
     "name": "LHB19 / GERECSE", 
     "notes": "H24\nSensitive fauna", 
@@ -161,7 +161,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474240N 0170522E  - 474308N 0171347E  - 474211N 0171346E  - 474007N 0170956E  - 473929N 0170145E  - 474205N 0170116E along border AUSTRIA_HUNGARY - 474240N 0170522E", 
+    "geom_raw": "474240N 0170522E  - 474308N 0171347E  - 474211N 0171346E  - 474007N 0170956E  - 473929N 0170145E  - 474205N 0170116E along border AUSTRIA_HUNGARY - 474240N 0170522E", 
     "lower_raw": "GND", 
     "name": "LHB20 / NYÍRKAI-HANY", 
     "notes": "H24\nSensitive fauna", 
@@ -169,7 +169,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "474300N 0172019E  - 474221N 0172425E  - 473624N 0172149E  - 473730N 0171641E  - 474300N 0172019E", 
+    "geom_raw": "474300N 0172019E  - 474221N 0172425E  - 473624N 0172149E  - 473730N 0171641E  - 474300N 0172019E", 
     "lower_raw": "GND", 
     "name": "LHB21 / FEHÉR-TÓ, BARBACSI-TÓ", 
     "notes": "H24\nSensitive fauna", 
@@ -177,7 +177,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "472433N 0163140E then a clockwise arc radius 6 KM centered on 472154N 0162856E  - 471840N 0162829E along border AUSTRIA_HUNGARY - 472433N 0163140E", 
+    "geom_raw": "472433N 0163140E then a clockwise arc radius 6 KM centered on 472154N 0162856E  - 471840N 0162829E along border AUSTRIA_HUNGARY - 472433N 0163140E", 
     "lower_raw": "GND", 
     "name": "LHB22 / KŐSZEGI-HG.", 
     "notes": "H24\nSensitive fauna", 
@@ -185,7 +185,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "464303N 0171326E  - 464236N 0171748E  - 463820N 0171503E  - 464034N 0171335E  - 464303N 0171326E", 
+    "geom_raw": "464303N 0171326E  - 464236N 0171748E  - 463820N 0171503E  - 464034N 0171335E  - 464303N 0171326E", 
     "lower_raw": "GND", 
     "name": "LHB23 / KIS-BALATON", 
     "notes": "H24\nSensitive fauna", 
@@ -193,7 +193,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "471340N 0183522E  - 470704N 0183623E  - 470723N 0183139E  - 470948N 0183228E  - 471049N 0183137E  - 471308N 0183139E  - 471340N 0183522E", 
+    "geom_raw": "471340N 0183522E  - 470704N 0183623E  - 470723N 0183139E  - 470948N 0183228E  - 471049N 0183137E  - 471308N 0183139E  - 471340N 0183522E", 
     "lower_raw": "GND", 
     "name": "LHB24 / VELENCEI-TÓ, DINNYÉS", 
     "notes": "H24\nSensitive fauna", 
@@ -201,7 +201,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "472942N 0183126E  - 472042N 0183044E  - 471840N 0181458E  - 472435N 0181329E  - 472907N 0182201E  - 472942N 0183126E", 
+    "geom_raw": "472942N 0183126E  - 472042N 0183044E  - 471840N 0181458E  - 472435N 0181329E  - 472907N 0182201E  - 472942N 0183126E", 
     "lower_raw": "GND", 
     "name": "LHB25 / VÉRTES", 
     "notes": "H24\nSensitive fauna", 
@@ -209,7 +209,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "480401N 0190608E  - 474833N 0190657E  - 473858N 0190406E  - 474036N 0184353E  - 474723N 0185152E  - 474937N 0185122E along border HUNGARY_SLOVAKREPUBLIC - 480401N 0190608E", 
+    "geom_raw": "480401N 0190608E  - 474833N 0190657E  - 473858N 0190406E  - 474036N 0184353E  - 474723N 0185152E  - 474937N 0185122E along border HUNGARY_SLOVAKREPUBLIC - 480401N 0190608E", 
     "lower_raw": "GND", 
     "name": "LHB26 / DUNAZUG-HG., BÖRZSÖNY", 
     "notes": "H24\nSensitive fauna\nOver the river of Danube from 1st November to 30th June, and out of the line of Danube from 1st March to 1st November", 
@@ -217,7 +217,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "471155N 0190402E  - 471135N 0190402E  - 471022N 0190536E  - 470928N 0190739E  - 470616N 0190231E  - 470403N 0191630E  - 470354N 0192224E  - 471150N 0192150E  - 471155N 0190402E", 
+    "geom_raw": "471155N 0190402E  - 471135N 0190402E  - 471022N 0190536E  - 470928N 0190739E  - 470616N 0190231E  - 470403N 0191630E  - 470354N 0192224E  - 471150N 0192150E  - 471155N 0190402E", 
     "lower_raw": "GND", 
     "name": "LHB27 / KISKUNSÁG-NORTH 1.", 
     "notes": "H24\nSensitive fauna", 
@@ -225,7 +225,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "470616N 0190231E  - 465519N 0190144E  - 465604N 0192257E  - 470354N 0192224E  - 470403N 0191630E  - 470616N 0190231E", 
+    "geom_raw": "470616N 0190231E  - 465519N 0190144E  - 465604N 0192257E  - 470354N 0192224E  - 470403N 0191630E  - 470616N 0190231E", 
     "lower_raw": "GND", 
     "name": "LHB28 / KISKUNSÁG-NORTH 2.", 
     "notes": "H24\nSensitive fauna", 
@@ -233,7 +233,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "465342N 0190808E  - 465004N 0192716E  - 463639N 0191858E  - 464022N 0191351E  - 463334N 0191413E  - 463435N 0185817E  - 465342N 0190808E", 
+    "geom_raw": "465342N 0190808E  - 465004N 0192716E  - 463639N 0191858E  - 464022N 0191351E  - 463334N 0191413E  - 463435N 0185817E  - 465342N 0190808E", 
     "lower_raw": "GND", 
     "name": "LHB29 / KISKUNSAG-SOUTH", 
     "notes": "H24\nSensitive fauna", 
@@ -241,7 +241,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "480336N 0194155E  - 475943N 0194848E  - 475132N 0193516E  - 475540N 0192835E  - 480336N 0194155E", 
+    "geom_raw": "480336N 0194155E  - 475943N 0194848E  - 475132N 0193516E  - 475540N 0192835E  - 480336N 0194155E", 
     "lower_raw": "GND", 
     "name": "LHB30 / CSERHÁT-EAST", 
     "notes": "H24\nSensitive fauna", 
@@ -249,7 +249,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 9 KM centered on 480713N 0200833E", 
+    "geom_raw": "A circle radius 9 KM centered on 480713N 0200833E", 
     "lower_raw": "GND", 
     "name": "LHB31 / TARNAVIDÉK", 
     "notes": "H24\nSensitive fauna", 
@@ -257,7 +257,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "481629N 0202402E  - 480608N 0204702E  - 475325N 0204119E  - 475631N 0201651E  - 481629N 0202402E", 
+    "geom_raw": "481629N 0202402E  - 480608N 0204702E  - 475325N 0204119E  - 475631N 0201651E  - 481629N 0202402E", 
     "lower_raw": "GND", 
     "name": "LHB32 / BÜKK", 
     "notes": "H24\nSensitive fauna", 
@@ -265,7 +265,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 7 KM centered on 475953N 0210601E", 
+    "geom_raw": "A circle radius 7 KM centered on 475953N 0210601E", 
     "lower_raw": "GND", 
     "name": "LHB33 / KESZNYÉTEN", 
     "notes": "H24\nSensitive fauna", 
@@ -273,7 +273,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "A circle radius 10 KM centered on 471606N 0205122E", 
+    "geom_raw": "A circle radius 10 KM centered on 471606N 0205122E", 
     "lower_raw": "GND", 
     "name": "LHB34 / KECSKERI-PUSZTÁK", 
     "notes": "H24\nSensitive fauna", 
@@ -281,7 +281,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "460316N 0184306E  - 460144N 0184055E  - 455444N 0183957E along border CROATIA_HUNGARY - 455515.00N 0185324.00E along border HUNGARY_SERBIAANDMONTENEGRO - 455606N 0185427E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E", 
+    "geom_raw": "460316N 0184306E  - 460144N 0184055E  - 455444N 0183957E along border CROATIA_HUNGARY - 455515.00N 0185324.00E along border HUNGARY_SERBIAANDMONTENEGRO - 455606N 0185427E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E", 
     "lower_raw": "GND", 
     "name": "LHB35A / BÉDA-KARAPANCSA", 
     "notes": "02 MAR-30 JUN: ANY 00:00 (UTCW) - 24:00 (UTCW)\nSensitive fauna", 
@@ -289,7 +289,7 @@
   }, 
   {
     "class": "B", 
-    "geometry_raw": "460316N 0184306E  - 460144N 0184055E  - 455444N 0183957E along border CROATIA_HUNGARY - 455515.00N 0185324.00E along border HUNGARY_SERBIAANDMONTENEGRO - 455606N 0185427E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E", 
+    "geom_raw": "460316N 0184306E  - 460144N 0184055E  - 455444N 0183957E along border CROATIA_HUNGARY - 455515.00N 0185324.00E along border HUNGARY_SERBIAANDMONTENEGRO - 455606N 0185427E  - 460945N 0185637E  - 460205N 0184456E  - 460316N 0184306E", 
     "lower_raw": "GND", 
     "name": "LHB35B / BÉDA-KARAPANCSA", 
     "notes": "01 JUL-01 MAR: ANY 00:00 (UTCW) - 24:00 (UTCW)\nSensitive fauna", 
