@@ -7,7 +7,7 @@ def latlon_str_to_point(latlon_str):
     lat = process_dms_str(lat_str)
     lon = process_dms_str(lon_str)
 
-    return lat, lon
+    return lon, lat
 
 
 def process_dms_str(dms_str):

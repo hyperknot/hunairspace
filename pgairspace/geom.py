@@ -1,5 +1,4 @@
 import pyproj
-import matplotlib.pyplot as plt
 from shapely.geometry.polygon import Polygon
 
 
@@ -18,7 +17,17 @@ def offset_point(p1_lat, p1_lon, distance_meters, direction_degrees=0):
 
 
 def plot_polygon(polygon):
+    import matplotlib.pyplot as plt
+
     x, y = polygon.exterior.xy
+    plt.plot(x, y)
+    plt.show()
+
+
+def plot_line(line):
+    import matplotlib.pyplot as plt
+
+    x, y = line.xy
     plt.plot(x, y)
     plt.show()
 
