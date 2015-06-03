@@ -1,7 +1,5 @@
 import re
-import pyproj
-from shapely.geometry.polygon import LinearRing
-from .utils import convert_dms_to_float
+from .geom import convert_dms_to_float, generate_circle
 
 
 def latlon_str_to_point(latlon_str):
@@ -44,17 +42,4 @@ def process_circle(circle_str):
     lat, lon = latlon_str_to_point(center)
     return generate_circle(lat, lon, radius * 1000)
 
-
-def generate_circle(lat, lon, radius_meters):
-    points = list()
-    for dir in range(0, 360, 30):
-        p = offset_point(lat, lon, radius_meters, dir)
-        points.append(p)
-    return LinearRing(points)
-
-
-def offset_point(p1_lat, p1_lon, distance_meters, direction_degrees=0):
-    geod = pyproj.Geod(ellps='WGS84')
-    p2_lon, p2_lat, _ = geod.fwd(p1_lon, p1_lat, direction_degrees, distance_meters)
-    return p2_lat, p2_lon
 

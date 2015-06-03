@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-from shapely.geometry.polygon import LinearRing
+from shapely.geometry.polygon import Polygon
 from pgairspace.utils import pp # noqa
 from pgairspace.hun_aip import process_chapters, process_airports
 from pgairspace.hun_geom import latlon_str_to_point, process_circle
+from pgairspace.geom import plot_polygon
 
 process_chapters()
 process_airports()
@@ -39,10 +40,20 @@ def process_geometry(data):
 
     assert points[0] == points[-1]
 
-    data['geom'] = LinearRing(points)
+    data['geom'] = Polygon(points)
     return data
 
 
 
-for d in data:
-    process_geometry(d)
+
+
+
+# for d in data:
+    # g = process_geometry(d)
+
+
+
+d = data[0]
+g = process_geometry(d)
+plot_polygon(g['geom'])
+
