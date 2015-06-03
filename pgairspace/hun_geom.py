@@ -13,6 +13,8 @@ def latlon_str_to_point(latlon_str):
 def process_dms_str(dms_str):
     if len(dms_str) == 7:
         dms_str = '0' + dms_str
+
+    print dms_str
     assert len(dms_str) == 8
 
     deg = int(dms_str[:3])
@@ -30,7 +32,7 @@ def process_dms_str(dms_str):
 
 def process_circle(circle_str):
     circle_str = circle_str.strip()
-    regex_str = r'A\ circle\ with\ (?:a\ )?radius\ of\ (\d+(?:\.\d+)?) KM\ centred\ on\ (\d+[NS]\ \d+[EW])'
+    regex_str = r'.*?(\d+(?:\.\d+)?)\ KM.*?(\d+[NS]\ \d+[EW])'
     regex = re.compile(regex_str)
 
     match = re.match(regex, circle_str)
@@ -38,6 +40,9 @@ def process_circle(circle_str):
 
     radius, center = match.groups()
     radius = float(radius)
+
+    print circle_str
+    print radius, center
 
     lat, lon = latlon_str_to_point(center)
     return generate_circle(lat, lon, radius * 1000)

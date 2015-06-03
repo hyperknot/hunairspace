@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from shapely.geometry.polygon import Polygon, LinearRing, LineString
+from shapely.geometry.polygon import Polygon, LineString
 from shapely.geometry import Point
 from pgairspace.utils import pp # noqa
 from pgairspace.utils import read_json
@@ -16,7 +16,7 @@ process_airports()
 from pgairspace.hun_aip import process_chapter
 
 
-data = process_chapter('2.1')
+data = process_chapter('5.6')
 
 
 
@@ -67,18 +67,27 @@ def process_border(points_with_border, border):
 
 
 def calculate_border_between_points(point_a, point_b, border):
-    dists = sorted([border.project(p) for p in [point_a, point_b]])
-    points = [border.interpolate(d) for d in dists]
+    dists = [border.project(p) for p in [point_a, point_b]]
+    dists_sorted = sorted(dists)
+    points = [border.interpolate(d) for d in dists_sorted]
 
     segment_a, segment_bc = cut_line(points[0], border)
     segment_b, segment_c = cut_line(points[1], segment_bc)
 
     segment_round = LineString(list(segment_c.coords) + list(segment_a.coords))
 
+    # selecting shorter segment
     if segment_b.length < segment_round.length:
-        return segment_b
+        selected = segment_b
     else:
-        return segment_round
+        selected = segment_round
+
+    # swapping if opposite direction is required
+    if dists != dists_sorted:
+        selected = LineString(selected.coords[::-1])
+
+    # returning segment without endpoints
+    return LineString(selected.coords[1:-1])
 
 
 def cut_line(cut_point, line, eps_mult=1e2):
@@ -91,9 +100,10 @@ def cut_line(cut_point, line, eps_mult=1e2):
     for i, p in enumerate(coords[:-1]):
         line_segment = LineString([coords[i], coords[i + 1]])
         line_segment_buffer = line_segment.buffer(eps, resolution=1)
+
         if line_segment_buffer.contains(point):
-            start_segment = LineString(coords[:i] + [point])
-            end_segment = LineString([point] + coords[i:])
+            start_segment = LineString(coords[:i + 1] + [point])
+            end_segment = LineString([point] + coords[i + 1:])
 
             return start_segment, end_segment
 
@@ -101,22 +111,25 @@ def cut_line(cut_point, line, eps_mult=1e2):
 
 
 
-
-for d in data:
-    g = process_geometry(d)
-    if 'border' in g:
-        break
-
 from shapely.geometry import asShape
 
 border_json = read_json('data/borders/hungary.json')
 border = asShape(border_json['geometries'][0]).exterior
-border = border.simplify(0.01)
-
-g1 = process_border(g, border)
-g2 = [p for p in g if p != 'border']
-
-plot_line(LineString(g2))
-plot_line(LineString(g1))
+border = border.simplify(0.001)
+border = LineString(border)
 
 
+
+gs = [process_geometry(d) for d in data if 'border' in process_geometry(d)]
+
+for g in gs:
+
+    g_orig = [p for p in g if p != 'border']
+    g_border = process_border(g, border)
+
+    # plot_line(LineString(g_orig))
+    plot_line(LineString(g_border))
+
+
+# import geojson
+# print geojson.dumps(LineString(g_border))
