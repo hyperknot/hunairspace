@@ -11,16 +11,14 @@ def latlon_str_to_point(latlon_str):
 
 
 def process_dms_str(dms_str):
-    if len(dms_str) == 7:
-        dms_str = '0' + dms_str
+    regex = r'^(\d{2,3})(\d{2})(\d{2}(?:.\d+)?)([NSWE])'
+    match = re.match(regex, dms_str.strip())
+    assert len(match.groups()) == 4
 
-    print dms_str
-    assert len(dms_str) == 8
-
-    deg = int(dms_str[:3])
-    min = int(dms_str[3:5])
-    sec = int(dms_str[5:7])
-    dir = dms_str[7]
+    deg, min, sec, dir = match.groups()
+    deg = int(deg)
+    min = int(min)
+    sec = float(sec)
 
     if dir.upper() in ['S', 'W']:
         sign = -1
@@ -31,20 +29,13 @@ def process_dms_str(dms_str):
 
 
 def process_circle(circle_str):
-    circle_str = circle_str.strip()
-    regex_str = r'.*?(\d+(?:\.\d+)?)\ KM.*?(\d+[NS]\ \d+[EW])'
-    regex = re.compile(regex_str)
-
-    match = re.match(regex, circle_str)
-    assert match
+    regex = r'.*?(\d+(?:\.\d+)?)\ KM.*?(\d+[NS]\ \d+[EW])'
+    match = re.match(regex, circle_str.strip())
+    assert len(match.groups()) == 2
 
     radius, center = match.groups()
     radius = float(radius)
 
-    print circle_str
-    print radius, center
-
     lat, lon = latlon_str_to_point(center)
     return generate_circle(lat, lon, radius * 1000)
-
 
