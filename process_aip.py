@@ -74,6 +74,7 @@ for ch in chapters:
         features.append(feature)
 
 
+
 for cl in classes:
     fc = FeatureCollection([f for f in features if f['properties']['class'] == cl])
     write_file_contents('geojson/{}.geojson'.format(cl), geojson.dumps(fc))

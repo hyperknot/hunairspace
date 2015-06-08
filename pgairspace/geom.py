@@ -55,6 +55,8 @@ def process_border(point_list, border):
 
 
 def calculate_border_between_points(point_a, point_b, border):
+    dir_sign = 1
+
     dists = [border.project(p) for p in [point_a, point_b]]
     dists_sorted = sorted(dists)
     points = [border.interpolate(d) for d in dists_sorted]
@@ -69,6 +71,7 @@ def calculate_border_between_points(point_a, point_b, border):
         selected = segment_b
     else:
         selected = segment_round
+        dir_sign *= -1
 
     coords = selected.coords
 
@@ -77,6 +80,9 @@ def calculate_border_between_points(point_a, point_b, border):
 
     # swapping direction
     if dists != dists_sorted:
+        dir_sign *= -1
+
+    if dir_sign == -1:
         coords = coords[::-1]
 
     return coords
