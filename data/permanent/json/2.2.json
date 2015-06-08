@@ -1,20 +1,20 @@
 [
   {
-    "class": "D", 
+    "class": "TMA", 
     "geom_raw": "482346N 0202459E along border HUNGARY_SLOVAKREPUBLIC - 482000N 0214901E  - 481703N 0214953E  - 481110N 0210551E  - 482346N 0202459E", 
     "lower_raw": "1000 FT AGL", 
     "name": "KOSICE TMA 2", 
     "upper_raw": "9500 FT ALT"
   }, 
   {
-    "class": "C", 
+    "class": "TMA", 
     "geom_raw": "474906N 0173651E  - 474449N 0173000E  - 473559N 0172918E  - 473559N 0171554E  - 473555N 0164005E along border AUSTRIA_HUNGARY - 480024N 0170939E along border HUNGARY_SLOVAKREPUBLIC - 474906N 0173651E", 
     "lower_raw": "5500 FT ALT", 
     "name": "LESMO AREA", 
     "upper_raw": "FL 245"
   }, 
   {
-    "class": "C", 
+    "class": "TMA", 
     "geom_raw": "480214N 0184917E along border HUNGARY_SLOVAKREPUBLIC - 474551N 0182754E  - 475117N 0182910E  - 475729N 0183036E  - 480214N 0184917E", 
     "lower_raw": "FL 90", 
     "name": "RUTOL AREA", 

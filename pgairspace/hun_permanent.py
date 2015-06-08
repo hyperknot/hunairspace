@@ -91,13 +91,14 @@ def parse_2_td(td):
     data['upper_raw'] = parts[2]
     data['lower_raw'] = parts[3]
     if len(parts) == 5:
-        data['class'] = parts[4]
+        data['class'] = 'TMA'
     if len(parts) > 5:
         data['geom_raw_union'] = parts[5]
         assert parts[6] == data['upper_raw']
         assert parts[7] == data['lower_raw']
     if 'class' not in data:
         data['class'] = get_class_from_name(data['name'])
+        print data['class']
     return data
 
 
