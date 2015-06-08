@@ -345,7 +345,7 @@ def parse_airport(soup, airport):
 
 
 def get_class_from_name(name):
-    classes = ['MCTR', 'CTR', 'CTA', 'MTMA', 'TIZ']
+    classes = ['MCTR', 'CTR', 'MTMA', 'TMA', 'CTA', 'TIZ']
     for c in classes:
         if c in name:
             return c

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from shapely.geometry.polygon import Polygon
-from pgairspace.utils import pp # noqa
+from pgairspace.utils import write_file_contents
 from pgairspace.hun_aip import process_chapters, process_airports
 from pgairspace.hun_geom import latlon_str_to_point, process_circle
 from pgairspace.geom import process_border, load_border
@@ -50,11 +50,14 @@ def process_raw_geometry(geom_raw, border):
 
 from pgairspace.hun_aip import process_chapter
 import os
+import geojson
+from geojson import Feature, FeatureCollection
 
 chapters = [f.rstrip('.sjon') for f in os.listdir('data/aip/json')]
 
 
-l = list()
+features = list()
+classes = set()
 for ch in chapters:
     if ch == 'airport':
         continue
@@ -62,18 +65,22 @@ for ch in chapters:
     data = process_chapter(ch)
     for d in data:
         cl = d['class']
-        if cl in ['TIZ']:
-            continue
-        # print cl
+        classes.add(cl)
 
-        g = process_raw_geometry(d['geom_raw'], border)
-        l.append(g)
+        geom = process_raw_geometry(d['geom_raw'], border)
+        properties = {k: v for k, v in d.iteritems() if not k.startswith('geom')}
+        feature = Feature(geometry=geom, id=1, properties=properties)
+
+        features.append(feature)
 
 
-from geojson import GeometryCollection
-gc = GeometryCollection(l)
+for cl in classes:
+    fc = FeatureCollection([f for f in features if f['properties']['class'] == cl])
+    write_file_contents('geojson/{}.geojson'.format(cl), geojson.dumps(fc))
 
-print gc
+
+# print FeatureCollection(features)
+
 
 
 

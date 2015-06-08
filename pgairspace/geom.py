@@ -70,20 +70,23 @@ def calculate_border_between_points(point_a, point_b, border):
     else:
         selected = segment_round
 
-    # swapping if opposite direction is required
-    if dists != dists_sorted:
-        selected = LineString(selected.coords[::-1])
-
     # cutting start and end segments if != points
     eps = 1.2e-14
     coords = selected.coords
     line_start = Point(coords[0]).buffer(eps, resolution=1)
     line_end = Point(coords[-1]).buffer(eps, resolution=1)
 
-    if not line_start.contains(points[0]) and not line_start.contains(points[1]):
+    # if not line_start.contains(points[0]) and not line_start.contains(points[1]):
+    if not line_start.contains(points[0]):
         coords = coords[1:]
-    if not line_end.contains(points[0]) and not line_end.contains(points[1]):
+
+    # if not line_end.contains(points[0]) and not line_end.contains(points[1]):
+    if not line_end.contains(points[1]):
         coords = coords[:-1]
+
+    # swapping if opposite direction is required
+    if dists != dists_sorted:
+        selected = LineString(selected.coords[::-1])
 
     # returning segment without endpoints
     return LineString(coords)
