@@ -47,7 +47,7 @@ def process_border(point_list, border):
             point_start = Point(point_list[i - 1])
             point_end = Point(point_list[i + 1])
             border_section = calculate_border_between_points(point_start, point_end, border)
-            new_point_list.extend(list(border_section.coords))
+            new_point_list.extend(border_section)
         else:
             new_point_list.append(point)
 
@@ -70,26 +70,16 @@ def calculate_border_between_points(point_a, point_b, border):
     else:
         selected = segment_round
 
-    # cutting start and end segments if != points
-    eps = 1.2e-14
     coords = selected.coords
-    line_start = Point(coords[0]).buffer(eps, resolution=1)
-    line_end = Point(coords[-1]).buffer(eps, resolution=1)
 
-    # if not line_start.contains(points[0]) and not line_start.contains(points[1]):
-    if not line_start.contains(points[0]):
-        coords = coords[1:]
+    # cutting start and endpoints
+    coords = coords[1:-1]
 
-    # if not line_end.contains(points[0]) and not line_end.contains(points[1]):
-    if not line_end.contains(points[1]):
-        coords = coords[:-1]
-
-    # swapping if opposite direction is required
+    # swapping direction
     if dists != dists_sorted:
-        selected = LineString(selected.coords[::-1])
+        coords = coords[::-1]
 
-    # returning segment without endpoints
-    return LineString(coords)
+    return coords
 
 
 def cut_line(cut_point, line, eps_mult=1e2):
