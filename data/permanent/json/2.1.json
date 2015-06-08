@@ -93,7 +93,7 @@
   {
     "class": "MCTR", 
     "geom_raw": "470342N 0192954E  - 470304N 0195208E  - 465559N 0200729E  - 464529N 0195854E  - 465329N 0193659E  - 465329N 0192954E  - 470342N 0192954E", 
-    "geom_raw_and": "A circle radius 10 KM centered on 465504N 0194503E", 
+    "geom_raw_union": "A circle radius 10 KM centered on 465504N 0194503E", 
     "lower_raw": "0 FT", 
     "name": "KECSKEMET MCTR", 
     "upper_raw": "4000 FT ALT"
@@ -101,7 +101,7 @@
   {
     "class": "MCTR", 
     "geom_raw": "473539N 0172854E  - 471029N 0174254E  - 470738N 0173124E  - 473259N 0171754E  - 473539N 0172854E", 
-    "geom_raw_and": "A circle radius 10 KM centered on 472150N 0173002E", 
+    "geom_raw_union": "A circle radius 10 KM centered on 472150N 0173002E", 
     "lower_raw": "0 FT", 
     "name": "PAPA MCTR", 
     "upper_raw": "4000 FT ALT"

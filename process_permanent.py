@@ -63,6 +63,12 @@ for filename in os.listdir(json_dir):
         classes.add(cl)
 
         geom = process_raw_geometry(d['geom_raw'], border)
+
+        # making union when geom_raw_union is present
+        if 'geom_raw_union' in d:
+            geom_and = process_raw_geometry(d['geom_raw_union'], border)
+            geom = geom.union(geom_and)
+
         properties = {k: v for k, v in d.iteritems() if not k.startswith('geom')}
         feature = Feature(geometry=geom, id=1, properties=properties)
 

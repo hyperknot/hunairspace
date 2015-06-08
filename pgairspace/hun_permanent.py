@@ -93,7 +93,7 @@ def parse_2_td(td):
     if len(parts) == 5:
         data['class'] = parts[4]
     if len(parts) > 5:
-        data['geom_raw_and'] = parts[5]
+        data['geom_raw_union'] = parts[5]
         assert parts[6] == data['upper_raw']
         assert parts[7] == data['lower_raw']
     if 'class' not in data:
