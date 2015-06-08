@@ -1,5 +1,39 @@
 import re
-from .geom import convert_dms_to_float, generate_circle
+from shapely.geometry import LineString
+from shapely.geometry.polygon import Polygon
+from .geom import convert_dms_to_float, generate_circle, process_border
+
+
+def process_raw_geometry(geom_raw, border):
+    geom_raw_split = [p.strip() for p in geom_raw.split('-')]
+
+    point_list = list()
+
+    for s in geom_raw_split:
+        # process circle separately
+        if s.startswith('A circle'):
+            assert len(geom_raw_split) == 1
+            return process_circle(s)
+
+        if 'along border' in s:
+            first, _ = s.split('along border')
+            point_list.append(latlon_str_to_point(first))
+            point_list.append(LineString(border))
+
+        elif 'then a clockwise arc' in s:
+            first, arc_str = s.split('then a clockwise arc')
+            point_list.append(latlon_str_to_point(first))
+            circle = process_circle(arc_str).exterior
+            point_list.append(LineString(circle))
+
+        else:
+            point_list.append(latlon_str_to_point(s))
+
+    assert point_list[0] == point_list[-1]
+
+    point_list_border = process_border(point_list, border)
+    return Polygon(point_list_border)
+
 
 
 def latlon_str_to_point(latlon_str):
