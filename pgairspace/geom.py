@@ -5,18 +5,18 @@ from shapely.geometry.polygon import Polygon
 from .utils import read_json
 
 
-def generate_circle(lat, lon, radius_meters):
+def generate_circle(lon, lat, radius_meters):
     points = list()
     for dir in range(0, 360, 15):
-        p = offset_point(lat, lon, radius_meters, dir)
+        p = offset_point(lon, lat, radius_meters, dir)
         points.append(p)
     return Polygon(points)
 
 
-def offset_point(p1_lat, p1_lon, distance_meters, direction_degrees=0):
+def offset_point(p1_lon, p1_lat, distance_meters, direction_degrees=0):
     geod = pyproj.Geod(ellps='WGS84')
     p2_lon, p2_lat, _ = geod.fwd(p1_lon, p1_lat, direction_degrees, distance_meters)
-    return p2_lat, p2_lon
+    return p2_lon, p2_lat
 
 
 def plot_polygon(polygon):

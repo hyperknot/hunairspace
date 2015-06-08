@@ -98,7 +98,6 @@ def parse_2_td(td):
         assert parts[7] == data['lower_raw']
     if 'class' not in data:
         data['class'] = get_class_from_name(data['name'])
-        print data['class']
     return data
 
 

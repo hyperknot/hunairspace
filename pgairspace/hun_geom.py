@@ -36,6 +36,6 @@ def process_circle(circle_str):
     radius, center = match.groups()
     radius = float(radius)
 
-    lat, lon = latlon_str_to_point(center)
-    return generate_circle(lat, lon, radius * 1000)
+    lon, lat = latlon_str_to_point(center)
+    return generate_circle(lon, lat, radius * 1000)
 
