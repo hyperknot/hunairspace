@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from shapely.geometry.polygon import Polygon
+from shapely.geometry import LineString
 from pgairspace.utils import write_file_contents, read_json, delete_dir, ensure_dir
 from pgairspace.hun_permanent import process_chapters, process_airports, json_dir
 from pgairspace.hun_geom import latlon_str_to_point, process_circle
@@ -27,13 +28,13 @@ def process_raw_geometry(geom_raw, border):
         if 'along border' in s:
             first, _ = s.split('along border')
             point_list.append(latlon_str_to_point(first))
-            point_list.append('border')
+            point_list.append(LineString(border))
 
         elif 'then a clockwise arc' in s:
             first, arc_str = s.split('then a clockwise arc')
             point_list.append(latlon_str_to_point(first))
-            circle = process_circle(arc_str)
-            point_list.append(circle)
+            circle = process_circle(arc_str).exterior
+            point_list.append(LineString(circle))
 
         else:
             point_list.append(latlon_str_to_point(s))

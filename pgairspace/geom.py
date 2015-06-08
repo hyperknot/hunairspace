@@ -41,28 +41,19 @@ def convert_dms_to_float(deg, min, sec, sign=1):
 
 def process_border(point_list, border):
     new_point_list = list()
-    for i, point in enumerate(point_list):
-        # border
-        if point == 'border':
-            assert i != 0 and i != len(point_list) - 1
-            point_start = Point(point_list[i - 1])
-            point_end = Point(point_list[i + 1])
-            border_section = calculate_border_between_points(point_start, point_end, border)
-            new_point_list.extend(border_section)
-
-        # arc
-        elif type(point).__name__ == 'Polygon':
+    for i, section in enumerate(point_list):
+        # LineString
+        if type(section).__name__ == 'LineString':
             assert i != 0 and i != len(point_list) - 1
             point_start = Point(point_list[i - 1])
             point_end = Point(point_list[i + 1])
 
-            circle = LineString(point.exterior)
-            arc_section = calculate_border_between_points(point_start, point_end, circle)
-            new_point_list.extend(arc_section)
+            line_section = calculate_border_between_points(point_start, point_end, section)
+            new_point_list.extend(line_section)
 
         # normal point
         else:
-            new_point_list.append(point)
+            new_point_list.append(section)
 
     return new_point_list
 
