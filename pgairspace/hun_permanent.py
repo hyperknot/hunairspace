@@ -16,7 +16,7 @@ def process_airports():
 
     data = list()
     for airport in airports:
-        data.append(process_airport(airport))
+        data.extend(process_airport(airport))
 
     write_json(os.path.join(json_dir, 'airports.json'), data)
 
@@ -231,7 +231,7 @@ def parse_airport(soup, airport):
                     if text == '2':
                         break
                     geom.append(' '.join([ntd.text.strip() for ntd in ntds[-2:]]))
-                geom_lines.append(', '.join(geom))
+                geom_lines.append(' - '.join(geom + [geom[0]]))
 
 
     assert limit_lines and geom_lines
@@ -356,8 +356,8 @@ def get_class_from_name(name):
 
 version = '2015-04-30'
 
-html_dir = os.path.join('data', 'aip', 'html')
-json_dir = os.path.join('data', 'aip', 'json')
+html_dir = os.path.join('data', 'permanent', 'html')
+json_dir = os.path.join('data', 'permanent', 'json')
 
 airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 

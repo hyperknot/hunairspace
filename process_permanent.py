@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 from shapely.geometry.polygon import Polygon
-from pgairspace.utils import write_file_contents
-from pgairspace.hun_aip import process_chapters, process_airports
+from pgairspace.utils import write_file_contents, read_json, delete_dir, ensure_dir
+from pgairspace.hun_permanent import process_chapters, process_airports, json_dir
 from pgairspace.hun_geom import latlon_str_to_point, process_circle
 from pgairspace.geom import process_border, load_border
 
@@ -10,9 +10,6 @@ from pgairspace.geom import process_border, load_border
 process_chapters()
 process_airports()
 border = load_border('hungary.json')
-
-
-
 
 
 
@@ -47,22 +44,20 @@ def process_raw_geometry(geom_raw, border):
 
 
 
-
-from pgairspace.hun_aip import process_chapter
 import os
 import geojson
 from geojson import Feature, FeatureCollection
 
-chapters = [f.rstrip('.sjon') for f in os.listdir('data/aip/json')]
-
-
 features = list()
 classes = set()
-for ch in chapters:
-    if ch == 'airport':
-        continue
 
-    data = process_chapter(ch)
+delete_dir('geojson')
+ensure_dir('geojson')
+
+for filename in os.listdir(json_dir):
+    json_file = os.path.join(json_dir, filename)
+    data = read_json(json_file)
+
     for d in data:
         cl = d['class']
         classes.add(cl)
@@ -73,26 +68,8 @@ for ch in chapters:
 
         features.append(feature)
 
-
-
 for cl in classes:
     fc = FeatureCollection([f for f in features if f['properties']['class'] == cl])
     write_file_contents('geojson/{}.geojson'.format(cl), geojson.dumps(fc))
 
 
-# print FeatureCollection(features)
-
-
-
-
-
-# for d in data:
-
-
-
-# plot_line(LineString(g_orig))
-# plot_line(LineString(g_border))
-
-
-# import geojson
-# print geojson.dumps(LineString(g_border))

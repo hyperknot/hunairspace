@@ -1,0 +1,98 @@
+[
+  {
+    "class": "TIZ", 
+    "geom_raw": "465341N 0212325E  - 464613N 0212426E  - 463747N 0212055E along border HUNGARY_ROMANIA - 462849N 0211712E  - 462629N 0211307E  - 462529N 0205740E  - 463510N 0205309E  - 465233N 0210554E  - 465341N 0212325E", 
+    "lower_raw": "GND", 
+    "name": "Békéscsaba TIZ", 
+    "notes": "LHBC", 
+    "upper_raw": "4000 FT ALT"
+  }, 
+  {
+    "class": "CTR", 
+    "geom_raw": "473546N 0190523E  - 473358N 0191018E  - 473128N 0191427E  - 473230N 0191930E  - 472400N 0193400E  - 471500N 0192130E  - 472400N 0190730E  - 472700N 0190630E  - 472808N 0190426E  - 472939N 0190336E  - 473022N 0190325E  - 473546N 0190523E", 
+    "lower_raw": "GND", 
+    "name": "BUDAPEST CTR", 
+    "notes": "LHBP", 
+    "upper_raw": "2000 FT ALT"
+  }, 
+  {
+    "class": "CTR", 
+    "geom_raw": "473908N 0214744E - 473338N 0215503E - 471843N 0213038E - 472433N 0212252E - 473908N 0214744E", 
+    "lower_raw": "GND", 
+    "name": "DEBRECEN TIZ1 and CTR", 
+    "notes": "LHDC", 
+    "upper_raw": "2000 FT ALT"
+  }, 
+  {
+    "class": "CTA", 
+    "geom_raw": "474127N 0215009E - 473102N 0220059E - 471020N 0214329E - 471154N 0212611E - 472402N 0211743E - 473243N 0213243E - 474127N 0215009E", 
+    "lower_raw": "2000 FT ALT", 
+    "name": "DEBRECEN TIZ2 and CTA1", 
+    "notes": "LHDC", 
+    "upper_raw": "9500 FT ALT"
+  }, 
+  {
+    "class": "CTA", 
+    "geom_raw": "474718N 0213722E - 474127N 0215009E - 473243N 0213243E - 474559N 0213339E - 474718N 0213722E", 
+    "lower_raw": "5000 FT ALT", 
+    "name": "DEBRECEN TIZ3 and CTA2", 
+    "notes": "LHDC", 
+    "upper_raw": "9500 FT ALT"
+  }, 
+  {
+    "class": "TIZ", 
+    "geom_raw": "A circle radius 5 KM centered on 473500N 0165040E", 
+    "lower_raw": "GND", 
+    "name": "FERTOSZENTMIKLOS TIZ", 
+    "notes": "LHFM", 
+    "upper_raw": "4000 FT ALT"
+  }, 
+  {
+    "class": "TIZ", 
+    "geom_raw": "A circle with 10 KM radius centred at 475856N 0214100E", 
+    "lower_raw": "GND", 
+    "name": "Nyíregyháza TIZ", 
+    "notes": "LHNY", 
+    "upper_raw": "4000 FT"
+  }, 
+  {
+    "class": "TIZ", 
+    "geom_raw": "454614N 0181508E  - 455106N 0182820E  - 461304N 0182154E  - 461402N 0181906E  - 460854N 0180424E  - 455347N 0175950E  - 454614N 0181508E", 
+    "lower_raw": "GND", 
+    "name": "PECS-POGANY TIZ", 
+    "notes": "LHPP", 
+    "upper_raw": "9500 FT ALT"
+  }, 
+  {
+    "class": "TIZ", 
+    "geom_raw": "474906N 0173651E  - 474449N 0173000E  - 473559N 0172918E  - 473559N 0173554E  - 472959N 0174154E  - 472959N 0180954E  - 473521N 0181527E  - 474419N 0181530E along border HUNGARY_SLOVAKREPUBLIC - 474906N 0173651E", 
+    "lower_raw": "GND", 
+    "name": "PER TIZ", 
+    "notes": "LHPR", 
+    "upper_raw": "9500 FT ALT"
+  }, 
+  {
+    "class": "CTA", 
+    "geom_raw": "465211N 0164912E  - 465233N 0171252E  - 463423N 0171944E  - 462847N 0171750E  - 462539N 0170031E  - 465211N 0164912E", 
+    "lower_raw": "2000 FT ALT", 
+    "name": "SARMELLEK CTA and SARMELLEK TIZ2", 
+    "notes": "LHSM", 
+    "upper_raw": "9500 FT ALT"
+  }, 
+  {
+    "class": "CTR", 
+    "geom_raw": "465232N 0170443E  - 465233N 0171252E  - 464035N 0171331E  - 463224N 0171903E  - 462847N 0171750E  - 462659N 0170752E  - 463919N 0170630E  - 465010N 0165907E  - 465232N 0170443E", 
+    "lower_raw": "GND", 
+    "name": "SARMELLEK CTR and SARMELLEK TIZ1", 
+    "notes": "LHSM", 
+    "upper_raw": "2000 FT ALT"
+  }, 
+  {
+    "class": "TIZ", 
+    "geom_raw": "462300N 0200000E - 462300N 0201300E - 461500N 0201300E - 461217N 0200526E - 461500N 0200000E - 462300N 0200000E", 
+    "lower_raw": "GND", 
+    "name": "SZEGED TIZ", 
+    "notes": "LHUD", 
+    "upper_raw": "4000 FT ALT"
+  }
+]

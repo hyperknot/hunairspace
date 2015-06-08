@@ -1,8 +1,8 @@
 import os
+import shutil
 import codecs
 import json
 from bs4 import BeautifulSoup
-
 
 
 def read_json(path, silent=True):
@@ -65,3 +65,20 @@ def pp(data):
 
 def convert_dms_to_float(deg, min, sec, sign=1):
     return sign * deg + min / 60. + sec / 3600.
+
+
+def rstrip(string, substr):
+    if not string.endswith(substr):
+        return string
+    return string[:-len(substr)]
+
+
+def lstrip(string, substr):
+    if not string.startswith(substr):
+        return string
+    return string[len(substr):]
+
+
+def delete_dir(directory):
+    if os.path.exists(directory):
+        shutil.rmtree(directory)

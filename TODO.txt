@@ -1,0 +1,2 @@
+'then a clockwise arc'
+circle bug
