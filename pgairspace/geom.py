@@ -42,12 +42,25 @@ def convert_dms_to_float(deg, min, sec, sign=1):
 def process_border(point_list, border):
     new_point_list = list()
     for i, point in enumerate(point_list):
+        # border
         if point == 'border':
             assert i != 0 and i != len(point_list) - 1
             point_start = Point(point_list[i - 1])
             point_end = Point(point_list[i + 1])
             border_section = calculate_border_between_points(point_start, point_end, border)
             new_point_list.extend(border_section)
+
+        # arc
+        elif type(point).__name__ == 'Polygon':
+            assert i != 0 and i != len(point_list) - 1
+            point_start = Point(point_list[i - 1])
+            point_end = Point(point_list[i + 1])
+
+            circle = LineString(point.exterior)
+            arc_section = calculate_border_between_points(point_start, point_end, circle)
+            new_point_list.extend(arc_section)
+
+        # normal point
         else:
             new_point_list.append(point)
 
@@ -125,7 +138,7 @@ def cut_line(cut_point, line, eps_mult=1e2):
 def load_border(filename):
     border_json = read_json(os.path.join('data', 'borders', filename))
     border = asShape(border_json['geometries'][0]).exterior
-    border = border.simplify(0.01)
+    border = border.simplify(0.001)
 
     assert border.coords[0] == border.coords[-1]
     return LineString(border)

@@ -30,9 +30,10 @@ def process_raw_geometry(geom_raw, border):
             point_list.append('border')
 
         elif 'then a clockwise arc' in s:
-            first, _ = s.split('then a clockwise arc')
+            first, arc_str = s.split('then a clockwise arc')
             point_list.append(latlon_str_to_point(first))
-            # point_list.append('border')
+            circle = process_circle(arc_str)
+            point_list.append(circle)
 
         else:
             point_list.append(latlon_str_to_point(s))
