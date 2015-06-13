@@ -13,7 +13,7 @@
     "lower_raw": "GND", 
     "name": "BUDAPEST CTR", 
     "notes": "LHBP", 
-    "upper_raw": "2000 FT ALT"
+    "upper_raw": "2000 FT ALT "
   }, 
   {
     "class": "CTR", 

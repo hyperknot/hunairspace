@@ -13,7 +13,7 @@
     "lower_raw": "GND", 
     "name": "LHP2 / CSILLEBÉRC", 
     "notes": "H24\nResearch nuclear reactor", 
-    "upper_raw": "3500 FT ALT"
+    "upper_raw": "3 500 FT ALT"
   }, 
   {
     "class": "R", 
@@ -36,7 +36,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 470503N 0180254E", 
     "lower_raw": "GND", 
     "name": "LHR3 / BALATONFŰZFŐ", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -44,7 +44,7 @@
     "geom_raw": "A circle with a radius of 1 KM centred on 464816N 0163720E", 
     "lower_raw": "GND", 
     "name": "LHR4 / ZALAEGERSZEG", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -52,7 +52,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 472508N 0170055E", 
     "lower_raw": "GND", 
     "name": "LHR5 / RÉPCELAK", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -60,7 +60,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 471702N 0185358E", 
     "lower_raw": "GND", 
     "name": "LHR6 / SZÁZHALOMBATTA", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -68,7 +68,7 @@
     "geom_raw": "A circle with a radius of 2.5 KM centred on 481429N 0203956E", 
     "lower_raw": "GND", 
     "name": "LHR8 / KAZINCBARCIKA", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "3 500 FT ALT"
   }, 
   {
@@ -76,7 +76,7 @@
     "geom_raw": "A circle with a radius of 3 KM centred on 475413N 0210134E", 
     "lower_raw": "GND", 
     "name": "LHR9 / TISZAÚJVÁROS", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -84,7 +84,7 @@
     "geom_raw": "A circle with a radius of 5 KM centred on 473154N 0212253E", 
     "lower_raw": "GND", 
     "name": "LHR10 / HAJDÚSZOBOSZLÓ", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -92,7 +92,7 @@
     "geom_raw": "A circle with a radius of 1.5 KM centred on 475703N 0212153E", 
     "lower_raw": "GND", 
     "name": "LHR11 / TISZAVASVÁRI", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -100,7 +100,7 @@
     "geom_raw": "A circle with a radius of 1.5 KM centred on 481003N 0204253E", 
     "lower_raw": "GND", 
     "name": "LHR12 / SAJÓBÁBONY", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -108,7 +108,7 @@
     "geom_raw": "A circle with a radius of 3 KM centred on 461904N 0201246E", 
     "lower_raw": "GND", 
     "name": "LHR14 / ALGYŐ", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -116,7 +116,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 465703N 0185554E", 
     "lower_raw": "GND", 
     "name": "LHR15 / DUNAÚJVÁROS", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -124,7 +124,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 470804N 0200753E", 
     "lower_raw": "GND", 
     "name": "LHR16 / SZOLNOK-TÓSZEG", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -132,7 +132,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 471003N 0180824E", 
     "lower_raw": "GND", 
     "name": "LHR22 / PÉT", 
-    "notes": "H24\nFor aircraft with less than 250 KT (IAS)", 
+    "notes": "H24\nFor aircraft with less than 250 KT (KIAS)", 
     "upper_raw": "7 500 FT ALT"
   }, 
   {
@@ -236,7 +236,7 @@
     "geom_raw": "475633N 0201753E - 475633N 0201953E - 475903N 0201923E - 480003N 0201623E - 475633N 0201753E", 
     "lower_raw": "GND", 
     "name": "LHD15 / EGERBAKTA", 
-    "notes": "MOFRI 0500 (UTCW) - 2100 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -244,7 +244,7 @@
     "geom_raw": "474233N 0190024E - 474233N 0185654E - 474033N 0185824E - 474233N 0190024E", 
     "lower_raw": "GND", 
     "name": "LHD16 / IZBÉG", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -252,7 +252,7 @@
     "geom_raw": "474304N 0174554E - 474103N 0174554E - 474203N 0175154E - 474343N 0174854E - 474304N 0174554E", 
     "lower_raw": "GND", 
     "name": "LHD17 / GYŐRSZENTIVÁN", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -260,7 +260,7 @@
     "geom_raw": "464134N 0191154E - 464404N 0190824E - 463634N 0190824E - 463404N 0191154E - 464134N 0191154E", 
     "lower_raw": "GND", 
     "name": "LHD18 / CSORNA/AKASZTÓ", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -276,7 +276,7 @@
     "geom_raw": "462134N 0175055E - 461804N 0174955E - 461834N 0175225E - 462034N 0175225E - 462134N 0175055E", 
     "lower_raw": "GND", 
     "name": "LHD24 / SÁNTOS", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -284,7 +284,7 @@
     "geom_raw": "474533N 0192054E - 474803N 0191454E - 474703N 0191254E - 474533N 0192054E", 
     "lower_raw": "GND", 
     "name": "LHD29 / PÜSPÖKSZILÁGY", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -300,7 +300,7 @@
     "geom_raw": "464204N 0190124E - 463904N 0190424E - 464104N 0190954E - 464434N 0190624E - 464204N 0190124E", 
     "lower_raw": "GND", 
     "name": "LHD33 / ÁLLAMPUSZTA", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -308,7 +308,7 @@
     "geom_raw": "475603N 0184954E - 475302N 0184554E - 475203N 0185154E - 475303N 0185554E - 475603N 0185354E - 475603N 0184954E", 
     "lower_raw": "GND", 
     "name": "LHD34 / MÁRIANOSZTRA", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -332,7 +332,7 @@
     "geom_raw": "464503N 0183224E - 464203N 0183054E - 464333N 0183354E - 464503N 0183224E", 
     "lower_raw": "GND", 
     "name": "LHD37 / SIMONTORNYA", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "3 800 FT ALT"
   }, 
   {
@@ -340,7 +340,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 481703N 0215422E", 
     "lower_raw": "GND", 
     "name": "LHD39 / CIGÁND", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -348,7 +348,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 473903N 0163355E", 
     "lower_raw": "GND", 
     "name": "LHD50 / HARKA", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -356,7 +356,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 472333N 0163455E", 
     "lower_raw": "GND", 
     "name": "LHD52 / KŐSZEG", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -364,7 +364,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 465903N 0163455E", 
     "lower_raw": "GND", 
     "name": "LHD53 / NÁDASD", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }, 
   {
@@ -372,7 +372,7 @@
     "geom_raw": "A circle with a radius of 2 KM centred on 480403N 0191953E", 
     "lower_raw": "GND", 
     "name": "LHD55 / SZÜGY", 
-    "notes": "MOFRI 05:00 (UTCW) -  21:00 (UTCW)\nFiring field", 
+    "notes": "0500-2100 (0400-2000) WD\nFiring field", 
     "upper_raw": "2 300 FT ALT"
   }
 ]
