@@ -354,7 +354,7 @@ def get_class_from_name(name):
 
 
 
-version = '2015-04-30'
+version = '2015-07-23'
 
 html_dir = os.path.join('data', 'permanent', 'html')
 json_dir = os.path.join('data', 'permanent', 'json')
