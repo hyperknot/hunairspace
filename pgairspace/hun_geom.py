@@ -1,7 +1,8 @@
 import re
 from shapely.geometry import LineString
 from shapely.geometry.polygon import Polygon
-from .geom import convert_dms_to_float, generate_circle, process_border
+from .geom import convert_dms_to_float, generate_circle, process_border, fl_to_meters, \
+    feet_to_meters
 
 
 def process_raw_geometry(geom_raw, border):
@@ -45,11 +46,11 @@ def latlon_str_to_point(latlon_str):
 
 
 def process_dms_str(dms_str):
-    regex = r'^(\d{2,3})(\d{2})(\d{2}(?:.\d+)?)([NSWE])'
-    match = re.match(regex, dms_str.strip())
-    assert len(match.groups()) == 4
+    regex = r'^(\d{2,3})(\d{2})(\d{2}(?:.\d+)?)([NSWE])$'
+    m = re.search(regex, dms_str.strip())
+    assert len(m.groups()) == 4
 
-    deg, min, sec, dir = match.groups()
+    deg, min, sec, dir = m.groups()
     deg = int(deg)
     min = int(min)
     sec = float(sec)
@@ -63,13 +64,40 @@ def process_dms_str(dms_str):
 
 
 def process_circle(circle_str):
-    regex = r'.*?(\d+(?:\.\d+)?)\ KM.*?(\d+[NS]\ \d+[EW])'
-    match = re.match(regex, circle_str.strip())
-    assert len(match.groups()) == 2
+    regex = r'(\d+(?:\.\d+)?) KM.*?(\d+[NS] \d+[EW])$'
+    m = re.search(regex, circle_str.strip())
+    assert len(m.groups()) == 2
 
-    radius, center = match.groups()
+    radius, center = m.groups()
     radius = float(radius)
 
     lon, lat = latlon_str_to_point(center)
     return generate_circle(lon, lat, radius * 1000)
 
+
+# return meter, AGL bool
+def process_altitude(alt_string):
+    alt_string = alt_string.strip()
+
+    if alt_string == 'GND':
+        return 0, False
+
+    regex_fl = r'^FL\ (\d+)$'
+    m = re.search(regex_fl, alt_string)
+    if m:
+        feet = float(m.group(1))
+        return fl_to_meters(feet), False
+
+    regex_feet = r'^(\d[\d ]*) FT(?: ALT)?$'
+    m = re.search(regex_feet, alt_string)
+    if m:
+        feet = float(m.group(1).replace(' ', ''))
+        return feet_to_meters(feet), False
+
+    regex_feet_agl = r'^(\d[\d ]*) FT AGL$'
+    m = re.search(regex_feet_agl, alt_string)
+    if m:
+        feet = float(m.group(1).replace(' ', ''))
+        return feet_to_meters(feet), True
+
+    raise ValueError('cannot parse alt string:', alt_string)

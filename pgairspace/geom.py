@@ -135,4 +135,12 @@ def load_border(filename):
     return LineString(border)
 
 
+def feet_to_meters(feet):
+    return int(feet * feet_in_meters)
 
+
+def fl_to_meters(fl):
+    return int(fl * 100 * feet_in_meters)
+
+
+feet_in_meters = 0.3048

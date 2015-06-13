@@ -1,8 +1,8 @@
 import os
-import re
 import geojson
 from geojson import Feature, FeatureCollection
 from .utils import read_json, delete_dir, ensure_dir, write_file_contents
+from .hun_geom import process_altitude
 
 
 def make_features(json_dir, border, process_raw_geometry):
@@ -20,7 +20,14 @@ def make_features(json_dir, border, process_raw_geometry):
                 geom_and = process_raw_geometry(d['geom_raw_union'], border)
                 geom = geom.union(geom_and)
 
-            process_altitude(d['upper_raw'])
+            upper, upper_agl = process_altitude(d['upper_raw'])
+            lower, lower_agl = process_altitude(d['lower_raw'])
+
+            if upper <= lower:
+                raise ValueError('upper <= lower: ', upper, lower)
+
+            d['upper'] = upper
+            d['lower'] = lower
 
             properties = {k: v for k, v in d.iteritems() if not k.startswith('geom')}
             feature = Feature(geometry=geom, id=1, properties=properties)
@@ -41,10 +48,3 @@ def write_geojsons(features, dir):
         write_file_contents(os.path.join(dir, '{}.geojson'.format(cl)), geojson.dumps(fc))
 
 
-def process_altitude(alt_string):
-    regex_fl = r'FL\ (\d+)'
-    m = re.match(regex_fl, alt_string)
-    if m:
-        print m.groups(0)
-
-    print alt_string
