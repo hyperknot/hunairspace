@@ -29,9 +29,6 @@ def make_features(border, process_raw_geometry):
 
 
 def write_geojsons(features):
-    delete_dir(geojson_dir)
-    ensure_dir(geojson_dir)
-
     classes = {f['properties']['class'] for f in features}
 
     for cl in classes:

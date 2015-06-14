@@ -1,4 +1,6 @@
 import re
+from copy import deepcopy
+from shapely.geometry import asShape
 from ..geom import fl_to_meters, feet_to_meters
 
 
@@ -42,7 +44,7 @@ def process_altitude(alt_string):
 
 
 def process_g_airspace(features):
-    filtered_g = list()
+    g_pg = dict()
 
     for feature in features:
         d = feature['properties']
@@ -57,14 +59,25 @@ def process_g_airspace(features):
             regex = r'Above (\d+) FT AMSL prior'
             m = re.search(regex, d['notes'])
             if m:
-                new_feature = feature
+                new_feature = deepcopy(feature)
                 nd = new_feature['properties']
                 nd['upper'] = feet_to_meters(float(m.group(1)))
                 nd['lower'] = 0
                 nd['upper_agl'] = nd['lower_agl'] = False
-                nd['notes'] = ''
-                nd['class'] = 'G_filtered'
-                filtered_g.append(new_feature)
+                nd['name'] = d['name'].split('/')[0].strip()[3:]
+                nd.pop('notes')
+                nd.pop('lower_raw')
+                nd.pop('upper_raw')
+                nd['class'] = 'G_PG'
 
-    features.extend(filtered_g)
+                g_pg[nd['name']] = new_feature
+
+    g20 = asShape(g_pg['G20']['geometry'])
+    g20a = asShape(g_pg['G20A']['geometry'])
+
+    g_pg['G20']['geometry'] = g20.union(g20a)
+    g_pg.pop('G20A')
+
+    features.extend(g_pg.values())
+
 
