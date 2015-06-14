@@ -76,6 +76,7 @@ def process_g_airspace(features):
     g20a = asShape(g_pg['G20A']['geometry'])
 
     g_pg['G20']['geometry'] = g20.union(g20a)
+    g_pg['G20']['properties']['name'] = 'G20-G20A'
     g_pg.pop('G20A')
 
     features.extend(g_pg.values())
@@ -83,18 +84,38 @@ def process_g_airspace(features):
 
 
 def subtract_tma_g(features):
-    airspaces_tma = [f for f in features if f['properties']['class'] == 'TMA']
+    airspaces_tma = [f.copy() for f in features if f['properties']['class'] == 'TMA']
     airspaces_gpg = [f for f in features if f['properties']['class'] == 'G_PG']
 
-    for air_g in airspaces_gpg:
-        geom_g = asShape(air_g['geometry'])
+    for air_tma in airspaces_tma:
+        for air_gpg in airspaces_gpg:
+            mix_tma_g(air_tma, air_gpg)
 
-        for air_tma in airspaces_tma:
-            if not air_tma['properties']['name'].startswith('BUDAPEST'):
-                continue
 
-            geom_tma = asShape(air_tma['geometry'])
+def mix_tma_g(air_tma, air_g):
+    eps = 1e-4
 
-            if geom_g.intersects(geom_tma):
-                print air_g['properties']['name'], air_tma['properties']['name']
+    global geom_tma, geom_g
+
+    geom_tma = asShape(air_tma['geometry'])
+    geom_g = asShape(air_g['geometry'])
+
+    if geom_g.intersects(geom_tma):
+        geom_g_minus_tma = geom_g.difference(geom_tma)
+        geom_tma_minus_g = geom_tma.difference(geom_g)
+        geom_intersection = geom_g.intersection(geom_tma)
+
+        if geom_intersection.area < eps:
+            return
+
+        air_tma['properties']['class'] = 'TMA_G_MIX'
+
+
+
+
+
+
+
+
+
 
