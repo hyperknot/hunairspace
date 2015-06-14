@@ -1,8 +1,9 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-from .utils import beautify_html, write_file_contents, pp, write_json, ensure_dir, \
+from ..utils import beautify_html, write_file_contents, pp, write_json, ensure_dir, \
     read_file_contents
+from ..config import html_dir, json_dir
 
 
 def process_chapters():
@@ -54,7 +55,6 @@ def download_chapter(chapter, dir):
         write_file_contents(html_file, html)
 
 
-
 def download_airport(airport, dir):
     url_template = 'http://ais.hungarocontrol.hu/aip/{version}/{version}-AIRAC/html/eAIP/LH-AD-2.{airport}-en-HU.html'
 
@@ -67,7 +67,6 @@ def download_airport(airport, dir):
     if r.ok:
         html = beautify_html(r.text)
         write_file_contents(html_file, html)
-
 
 
 def parse_2(soup, _):
@@ -356,9 +355,6 @@ def get_class_from_name(name):
 
 version = '2015-07-23'
 
-html_dir = os.path.join('data', 'permanent', 'html')
-json_dir = os.path.join('data', 'permanent', 'json')
-
 airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 
 chapters = {
@@ -369,3 +365,4 @@ chapters = {
     '5.5': parse_5,
     '5.6': parse_5,
 }
+

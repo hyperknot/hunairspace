@@ -1,8 +1,7 @@
 import re
 from shapely.geometry import LineString
 from shapely.geometry.polygon import Polygon
-from .geom import convert_dms_to_float, generate_circle, process_border, fl_to_meters, \
-    feet_to_meters
+from ..geom import convert_dms_to_float, generate_circle, process_border
 
 
 def process_raw_geometry(geom_raw, border):
@@ -73,31 +72,3 @@ def process_circle(circle_str):
 
     lon, lat = latlon_str_to_point(center)
     return generate_circle(lon, lat, radius * 1000)
-
-
-# return meter, AGL bool
-def process_altitude(alt_string):
-    alt_string = alt_string.strip()
-
-    if alt_string == 'GND':
-        return 0, False
-
-    regex_fl = r'^FL\ (\d+)$'
-    m = re.search(regex_fl, alt_string)
-    if m:
-        feet = float(m.group(1))
-        return fl_to_meters(feet), False
-
-    regex_feet = r'^(\d[\d ]*) FT(?: ALT)?$'
-    m = re.search(regex_feet, alt_string)
-    if m:
-        feet = float(m.group(1).replace(' ', ''))
-        return feet_to_meters(feet), False
-
-    regex_feet_agl = r'^(\d[\d ]*) FT AGL$'
-    m = re.search(regex_feet_agl, alt_string)
-    if m:
-        feet = float(m.group(1).replace(' ', ''))
-        return feet_to_meters(feet), True
-
-    raise ValueError('cannot parse alt string:', alt_string)
