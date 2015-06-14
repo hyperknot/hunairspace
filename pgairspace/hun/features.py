@@ -6,16 +6,11 @@ def process_altitudes(features):
     for feature in features:
         d = feature['properties']
 
-        upper, upper_agl = process_altitude(d['upper_raw'])
-        lower, lower_agl = process_altitude(d['lower_raw'])
+        d['upper'], d['upper_agl'] = process_altitude(d['upper_raw'])
+        d['lower'], d['lower_agl'] = process_altitude(d['lower_raw'])
 
-        if upper <= lower:
-            raise ValueError('upper <= lower: ', upper, lower)
-
-        d['upper'] = upper
-        d['lower'] = lower
-
-    return features
+        if d['upper'] <= d['lower']:
+            raise ValueError('upper <= lower: ', d['upper'], d['lower'])
 
 
 # return meter, AGL bool
@@ -47,5 +42,29 @@ def process_altitude(alt_string):
 
 
 def process_g_airspace(features):
+    filtered_g = list()
+
     for feature in features:
-        print feature['note']
+        d = feature['properties']
+
+        if d['class'] != 'G':
+            continue
+
+        if d['name'].startswith('LHSG2V'):
+            continue
+
+        if 'notes' in d:
+            regex = r'Above (\d+) FT AMSL prior'
+            m = re.search(regex, d['notes'])
+            if m:
+                new_feature = feature
+                nd = new_feature['properties']
+                nd['upper'] = feet_to_meters(float(m.group(1)))
+                nd['lower'] = 0
+                nd['upper_agl'] = nd['lower_agl'] = False
+                nd['notes'] = ''
+                nd['class'] = 'G_filtered'
+                filtered_g.append(new_feature)
+
+    features.extend(filtered_g)
+
