@@ -2,6 +2,7 @@ import os
 import shutil
 import codecs
 import json
+import subprocess
 from bs4 import BeautifulSoup
 
 
@@ -82,3 +83,13 @@ def lstrip(string, substr):
 def delete_dir(directory):
     if os.path.exists(directory):
         shutil.rmtree(directory)
+
+
+def run_cmd(cmd):
+    process = subprocess.Popen(cmd, shell=True,
+                               stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    stdout, stderr = process.communicate()
+    returncode = process.returncode
+    return stdout, stderr, returncode
+

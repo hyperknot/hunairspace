@@ -1,5 +1,6 @@
 import re
 from copy import deepcopy
+from geojson import Feature
 from shapely.geometry import asShape
 from ..geom import fl_to_meters, feet_to_meters
 
@@ -84,37 +85,60 @@ def process_g_airspace(features):
 
 
 def subtract_tma_g(features):
-    airspaces_tma = [f.copy() for f in features if f['properties']['class'] == 'TMA']
-    airspaces_gpg = [f for f in features if f['properties']['class'] == 'G_PG']
+    airspaces_tma = [deepcopy(f) for f in features if f['properties']['class'] == 'TMA']
+    airspaces_gpg = [deepcopy(f) for f in features if f['properties']['class'] == 'G_PG']
+
+    air_mix = list()
 
     for air_tma in airspaces_tma:
+        if air_tma['properties']['lower'] >= 2895:
+            continue
+
+        air_tma['properties']['name'] = air_tma['properties']['name'].replace('BUDAPEST', '').strip()
+        air_tma['properties']['class'] = 'TMA_G_PG'
+        air_tma['properties']['fill'] = '#1a9f2e'
+
         for air_gpg in airspaces_gpg:
-            mix_tma_g(air_tma, air_gpg)
+            air_intersection = mix_tma_g(air_tma, air_gpg)
+            if air_intersection:
+                air_mix.append(air_intersection)
+
+    features.extend(airspaces_tma)
+    features.extend(air_mix)
 
 
 def mix_tma_g(air_tma, air_g):
     eps = 1e-4
 
-    global geom_tma, geom_g
-
     geom_tma = asShape(air_tma['geometry'])
     geom_g = asShape(air_g['geometry'])
 
     if geom_g.intersects(geom_tma):
-        geom_g_minus_tma = geom_g.difference(geom_tma)
         geom_tma_minus_g = geom_tma.difference(geom_g)
         geom_intersection = geom_g.intersection(geom_tma)
+        # geom_g_minus_tma = geom_g.difference(geom_tma)
 
         if geom_intersection.area < eps:
             return
 
-        air_tma['properties']['class'] = 'TMA_G_MIX'
+        if air_tma['properties']['lower'] >= air_g['properties']['upper']:
+            return
 
+        air_tma['geometry'] = geom_tma_minus_g
 
+        air_intersection = Feature(
+            geometry=geom_intersection,
+            properties=deepcopy(air_tma['properties']))
 
+        air_intersection['properties']['name'] = '{} - {}'.format(
+            air_tma['properties']['name'], air_g['properties']['name'])
 
+        air_intersection['properties']['lower'] = air_g['properties']['upper']
+        del(air_intersection['properties']['lower_raw'])
+        air_intersection['properties']['class'] = 'TMA_G_PG'
+        air_intersection['properties']['fill'] = '#457aa3'
 
-
+        return air_intersection
 
 
 

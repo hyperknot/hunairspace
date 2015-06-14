@@ -136,11 +136,33 @@ def load_border(filename):
 
 
 def feet_to_meters(feet):
+    feet_in_meters = 0.3048
     return int(feet * feet_in_meters)
 
 
 def fl_to_meters(fl):
+    feet_in_meters = 0.3048
     return int(fl * 100 * feet_in_meters)
 
 
-feet_in_meters = 0.3048
+# helper function for debugging
+def visualize_geometries(_locals, names):
+    import os
+    import geojson
+    from geojson import Feature, FeatureCollection
+    from ..utils import write_file_contents, run_cmd
+
+    features = [Feature(geometry=_locals[name],
+                        properties={
+                            'name': name,
+                            'area': _locals[name].area})
+                for name in names
+                if _locals[name].area > 0]
+
+    fc = FeatureCollection(features)
+
+    write_file_contents('tmp.json', geojson.dumps(fc))
+    run_cmd('geojsonio tmp.json')
+    os.remove('tmp.json')
+
+
