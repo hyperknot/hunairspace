@@ -1,7 +1,7 @@
 import os
 import geojson
 from geojson import Feature, FeatureCollection
-from .utils import read_json, delete_dir, ensure_dir, write_file_contents
+from .utils import read_json, write_file_contents
 from .config import json_dir, geojson_dir
 
 
