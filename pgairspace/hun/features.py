@@ -81,3 +81,20 @@ def process_g_airspace(features):
     features.extend(g_pg.values())
 
 
+
+def subtract_tma_g(features):
+    airspaces_tma = [f for f in features if f['properties']['class'] == 'TMA']
+    airspaces_gpg = [f for f in features if f['properties']['class'] == 'G_PG']
+
+    for air_g in airspaces_gpg:
+        geom_g = asShape(air_g['geometry'])
+
+        for air_tma in airspaces_tma:
+            if not air_tma['properties']['name'].startswith('BUDAPEST'):
+                continue
+
+            geom_tma = asShape(air_tma['geometry'])
+
+            if geom_g.intersects(geom_tma):
+                print air_g['properties']['name'], air_tma['properties']['name']
+
