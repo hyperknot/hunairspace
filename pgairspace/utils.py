@@ -56,7 +56,7 @@ def ensure_dir(directory):
 
 
 def beautify_html(html):
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "lxml")
     return soup.prettify()
 
 

@@ -57,12 +57,12 @@ def process_g_airspace(features):
             continue
 
         if 'notes' in d:
-            regex = r'Above (\d+) FT AMSL prior'
+            regex = r'Above (.*?) FT AMSL prior'
             m = re.search(regex, d['notes'])
             if m:
                 new_feature = deepcopy(feature)
                 nd = new_feature['properties']
-                nd['upper'] = feet_to_meters(float(m.group(1)))
+                nd['upper'] = feet_to_meters(float(m.group(1).replace(' ', '')))
                 nd['lower'] = 0
                 nd['upper_agl'] = nd['lower_agl'] = False
                 nd['name'] = d['name'].split('/')[0].strip()[3:]
@@ -72,6 +72,7 @@ def process_g_airspace(features):
                 nd['class'] = 'G_PG'
 
                 g_pg[nd['name']] = new_feature
+
 
     g20 = asShape(g_pg['G20']['geometry'])
     g20a = asShape(g_pg['G20A']['geometry'])

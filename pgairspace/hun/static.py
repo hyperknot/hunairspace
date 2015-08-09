@@ -6,6 +6,9 @@ from ..utils import beautify_html, write_file_contents, pp, write_json, ensure_d
 from ..config import html_dir, json_dir
 
 
+version = '2015-08-20'
+
+
 def process_chapters():
     for chapter in chapters:
         data = process_chapter(chapter)
@@ -28,7 +31,7 @@ def process_chapter(chapter):
 
     download_chapter(chapter, html_dir)
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
-    soup = BeautifulSoup(read_file_contents(html_file))
+    soup = BeautifulSoup(read_file_contents(html_file), "lxml")
     data = chapters[chapter](soup, chapter)
     return data
 
@@ -36,7 +39,7 @@ def process_chapter(chapter):
 def process_airport(airport):
     download_airport(airport, html_dir)
     html_file = os.path.join(html_dir, '{}.html'.format(airport))
-    soup = BeautifulSoup(read_file_contents(html_file))
+    soup = BeautifulSoup(read_file_contents(html_file), "lxml")
     data = parse_airport(soup, airport)
     return data
 
@@ -351,9 +354,6 @@ def get_class_from_name(name):
     else:
         raise ValueError('No class found', name)
 
-
-
-version = '2015-07-23'
 
 airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 

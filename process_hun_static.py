@@ -11,13 +11,13 @@ from pgairspace.hun.features import process_altitudes, process_g_airspace, subtr
 
 
 # download and process to json
-process_chapters()
-process_airports()
+# process_chapters()
+# process_airports()
 
 # geometry
-border = load_border('hungary.json')
-features = make_features(border, process_raw_geometry)
-write_file_contents(geom_json, geojson.dumps(features))
+# border = load_border('hungary.json')
+# features = make_features(border, process_raw_geometry)
+# write_file_contents(geom_json, geojson.dumps(features))
 
 # features
 features = geojson.loads(read_file_contents(geom_json))

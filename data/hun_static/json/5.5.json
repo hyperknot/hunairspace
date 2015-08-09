@@ -4,7 +4,7 @@
     "geom_raw": "472633N 0184454E  - 472403N 0184854E  - 472703N 0184754E  - 472703N 0184624E  - 472633N 0184454E", 
     "lower_raw": "3000 FT ALT", 
     "name": "LHSA1 / AEROBATICS AREA1", 
-    "notes": "WD 0800 - 1700 (0700-1600)\nSAT, SUN and HOL 0800 - 1100 (0700 - 1000) and 1400 - 1700 (1300 - 1600)\nAbove 3 000 FT AMSL prior permission required by Budapest ATS Centre.\nAbove 3000 FT AMSL prior permission required by Budapest ATS Centre.\nNot available when LH-D30 activated\nClass: G", 
+    "notes": "WD 0800 - 1700 (0700-1600)\nSAT, SUN and HOL 0800 - 1100 (0700 - 1000) and 1400 - 1700 (1300 - 1600)\nAbove 3 000 FT AMSL prior permission required by Budapest ATS Centre.\nNot available when LH-D30 activated\nClass: G", 
     "upper_raw": "6000 FT ALT"
   }, 
   {
@@ -12,7 +12,7 @@
     "geom_raw": "473720N 0185425E  - 473302N 0185909E  - 473220N 0185858E  - 473500N 0185300E  - 473720N 0185425E", 
     "lower_raw": "GND", 
     "name": "LHSG1 / GLIDER AREA1", 
-    "notes": "HX\nOnly for VFR flights.\nAbove 2 500 FT AMSL prior permission required by Budapest ATS Centre.\nOnly for VFR flights.\nAbove 2500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nOnly for VFR flights.\nAbove 2 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "3500 FT ALT"
   }, 
   {
@@ -20,7 +20,7 @@
     "geom_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
     "lower_raw": "GND", 
     "name": "LHSG2S / GLIDER AREA2/S", 
-    "notes": "HX\nOnly for VFR flights.\nAbove 3 500 FT AMSL prior permission required by Budapest ATS Centre.\nOnly for VFR flights.\nAbove 3500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nOnly for VFR flights.\nAbove 3 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "6500 FT ALT"
   }, 
   {
@@ -28,7 +28,7 @@
     "geom_raw": "473500N 0185300E  - 473220N 0185858E  - 473002N 0185812E  - 472931N 0185846E  - 472910N 0190047E  - 472525N 0185940E  - 472519N 0185531E  - 472636N 0185717E  - 473328N 0184606E  - 473500N 0185300E", 
     "lower_raw": "GND", 
     "name": "LHSG2V / GLIDER AREA2/V", 
-    "notes": "HX\nOnly for VFR flights.\nAbove 3 500 FT AMSL prior permission required by Budapest ATS Centre.\nOnly for VFR flights.\nAbove 3500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nOnly for VFR flights.\nAbove 3 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "6500 FT ALT"
   }, 
   {
@@ -36,7 +36,7 @@
     "geom_raw": "473328N 0184606E  - 472636N 0185717E  - 472519N 0185531E  - 472516N 0185346E  - 473233N 0184156E  - 473328N 0184606E", 
     "lower_raw": "GND", 
     "name": "LHSG3 / GLIDER AREA3", 
-    "notes": "HX\nOnly for VFR flights.\nAbove 4 500 FT AMSL prior permission required by Budapest ATS Centre.\nOnly for VFR flights.\nAbove 4500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nOnly for VFR flights.\nAbove 4 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "6500 FT ALT"
   }, 
   {
@@ -44,7 +44,7 @@
     "geom_raw": "474527N 0183705E  - 473722N 0184005E  - 474723N 0185152E  - 474750N 0184351E along border HUNGARY_SLOVAKREPUBLIC - 474527N 0183705E", 
     "lower_raw": "GND", 
     "name": "LHSG10 / GLIDER AREA10", 
-    "notes": "HX\nAvailable only for VFR flights\nAbove 4 500 FT AMSL prior permission required by Budapest ATS Centre.\nAvailable only for VFR flights\nAbove 4500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nAvailable only for VFR flights\nAbove 4 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "6500 FT ALT"
   }, 
   {
@@ -52,7 +52,7 @@
     "geom_raw": "473900N 0190300E  - 473800N 0192100E  - 473600N 0191030E  - 473700N 0190400E  - 473900N 0190300E", 
     "lower_raw": "GND", 
     "name": "LHSG20 / GLIDER AREA20", 
-    "notes": "HX\nAvailable only for VFR flights.\nAbove 2 000 FT AMSL prior permission required by Budapest ATS Centre.\nAvailable only for VFR flights.\nAbove 2000 FT AMSL prior permission required by Budapest ATS Centre.\nClass:G", 
+    "notes": "HX\nAvailable only for VFR flights.\nAbove 2 000 FT AMSL prior permission required by Budapest ATS Centre.\nClass:G", 
     "upper_raw": "3000 FT ALT"
   }, 
   {
@@ -60,7 +60,7 @@
     "geom_raw": "A circle radius 2 KM centered on 473704N 0190836E", 
     "lower_raw": "2000 FT ALT", 
     "name": "LHSG20A / GLIDER AREA20A", 
-    "notes": "HX\nAbove 2 000 FT AMSL prior permission required by Budapest ATS Centre.\nAbove 2000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nAbove 2 000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "4000 FT ALT"
   }, 
   {
@@ -68,7 +68,7 @@
     "geom_raw": "474100N 0190430E  - 473948N 0194515E  - 473800N 0192100E  - 473900N 0190300E  - 474100N 0190430E", 
     "lower_raw": "GND", 
     "name": "LHSG21 / GLIDER AREA21", 
-    "notes": "HX\nAvailable only for VFR flights\nAbove 2 500 FT AMSL prior permission required by Budapest ATS Centre.\nAvailable only for VFR flights\nAbove 2500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nAvailable only for VFR flights\nAbove 2 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "5000 FT ALT"
   }, 
   {
@@ -76,7 +76,7 @@
     "geom_raw": "474636N 0190905E  - 474503N 0194053E  - 473948N 0194515E  - 474100N 0190430E  - 474636N 0190905E", 
     "lower_raw": "GND", 
     "name": "LHSG22 / GLIDER AREA22", 
-    "notes": "HX\nAvailable only for VFR flights.\nAbove 3 000 FT AMSL prior permission required by Budapest ATS Centre.\nAvailable only for VFR flights.\nAbove 3000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nAvailable only for VFR flights.\nAbove 3 000 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "6500 FT ALT"
   }, 
   {
@@ -84,7 +84,7 @@
     "geom_raw": "475547N 0193148E  - 474503N 0194053E  - 474636N 0190905E  - 475547N 0193148E", 
     "lower_raw": "GND", 
     "name": "LHSG23 / GLIDER AREA23", 
-    "notes": "HX\nAvailable only for VFR flights.\nAbove 6 500 FT AMSL prior permission required by Budapest ATS Centre.\nAvailable only for VFR flights.\nAbove 6500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
+    "notes": "HX\nAvailable only for VFR flights.\nAbove 6 500 FT AMSL prior permission required by Budapest ATS Centre.\nClass: G", 
     "upper_raw": "7500 FT ALT"
   }, 
   {
