@@ -19,37 +19,29 @@
     "class": "CTR", 
     "geom_raw": "473908N 0214744E - 473338N 0215503E - 471843N 0213038E - 472433N 0212252E - 473908N 0214744E", 
     "lower_raw": "GND", 
-    "name": "DEBRECEN TIZ1 and CTR", 
+    "name": "Debrecen TIZ1 and CTR", 
     "notes": "LHDC", 
-    "upper_raw": "2000 FT ALT"
+    "upper_raw": "2 000 FT ALT"
   }, 
   {
     "class": "TIZ", 
     "geom_raw": "474127N 0215009E - 473102N 0220059E - 471020N 0214329E - 471154N 0212611E - 472402N 0211743E - 473243N 0213243E - 474127N 0215009E", 
-    "lower_raw": "2000 FT ALT", 
-    "name": "DEBRECEN TIZ2 and CTA1", 
+    "lower_raw": "2 000 FT ALT", 
+    "name": "Debrecen TIZ2 and CTA1", 
     "notes": "LHDC", 
-    "upper_raw": "9500 FT ALT"
+    "upper_raw": "9 500 FT ALT"
   }, 
   {
     "class": "TIZ", 
     "geom_raw": "474718N 0213722E - 474127N 0215009E - 473243N 0213243E - 474559N 0213339E - 474718N 0213722E", 
-    "lower_raw": "5000 FT ALT", 
-    "name": "DEBRECEN TIZ3 and CTA2", 
+    "lower_raw": "5 000 FT ALT", 
+    "name": "Debrecen TIZ3 and CTA2", 
     "notes": "LHDC", 
-    "upper_raw": "9500 FT ALT"
+    "upper_raw": "9 500 FT ALT"
   }, 
   {
     "class": "TIZ", 
-    "geom_raw": "A circle radius 5 KM centered on 473500N 0165040E", 
-    "lower_raw": "GND", 
-    "name": "FERTOSZENTMIKLOS TIZ", 
-    "notes": "LHFM", 
-    "upper_raw": "4000 FT ALT"
-  }, 
-  {
-    "class": "TIZ", 
-    "geom_raw": "A circle with 10 KM radius centred at 475856N 0214100E", 
+    "geom_raw": "A circle with a 10 KM radius centred at 475856N 0214100E", 
     "lower_raw": "GND", 
     "name": "Nyíregyháza TIZ", 
     "notes": "LHNY", 

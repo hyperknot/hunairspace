@@ -145,7 +145,7 @@
   }, 
   {
     "class": "B", 
-    "geom_raw": "473831N 0165158E  - 473630N 0164330E  - 473315N 0164313E then a clockwise arc radius 7.6 KM centered on 473641N 0164632E  - 473831N 0165158E", 
+    "geom_raw": "along border  AUSTRIA_HUNGARY then a clokwise arc radius  centered on 7.6 KM 474052N 0164600E", 
     "lower_raw": "GND", 
     "name": "LHB18 / FERTŐ", 
     "notes": "H24\nSensitive fauna", 
@@ -153,17 +153,25 @@
   }, 
   {
     "class": "B", 
-    "geom_raw": "474358N 0183115E  - 473415N 0183129E  - 473409N 0182237E  - 474338N 0181731E  - 474358N 0183115E", 
+    "geom_raw": "474419N 0181530E  - 474338N 0181731E  - 474358N 0183115E  - 473415N 0183129E  - 473409N 0182237E  - 474000N 0181920E  - 474000N 0181703E  - 474146N 0181530E  - 474419N 0181530E", 
     "lower_raw": "GND", 
-    "name": "LHB19 / GERECSE", 
+    "name": "LHB19A / GERECSE", 
     "notes": "H24\nSensitive fauna", 
     "upper_raw": "1500 FT AGL"
   }, 
   {
     "class": "B", 
-    "geom_raw": "474240N 0170522E  - 474308N 0171347E  - 474211N 0171346E  - 474007N 0170956E  - 473929N 0170145E  - 474205N 0170116E along border AUSTRIA_HUNGARY - 474240N 0170522E", 
+    "geom_raw": "473647N 0182109E  - 473727N 0181857E  - 474000N 0181703E  - 474000N 0181920E  - 473647N 0182109E", 
     "lower_raw": "GND", 
-    "name": "LHB20 / NYÍRKAI-HANY", 
+    "name": "LHB19B / TATAI ÖREG-TÓ", 
+    "notes": "FM OCT 01 - TIL MAR 31 H24\nSensitive fauna", 
+    "upper_raw": "1500 FT AGL"
+  }, 
+  {
+    "class": "B", 
+    "geom_raw": "474235N 0170529E  - 474235N 0170530E  - 474307N 0171343E  - 474210N 0171342E  - 474006N 0170952E  - 473933N 0170818E  - 473847N 0170555E  - 473849N 0170149E  - 474204N 0170112E  - 474216N 0170226E  - 474230N 0170535E  - 474235N 0170529E", 
+    "lower_raw": "GND", 
+    "name": "LHB20 / DÉL-HANSÁG", 
     "notes": "H24\nSensitive fauna", 
     "upper_raw": "1500 FT AGL"
   }, 

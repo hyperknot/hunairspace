@@ -166,3 +166,17 @@ def visualize_geometries(_locals, names):
     os.remove('tmp.json')
 
 
+def sort_geojson(geojson):
+    features = geojson['features']
+
+    features_sorted = sorted(features,
+        key=lambda p: ((p.get('geometry', {}) or {}).get('type', ''),
+                       p.get('properties', {}).get('title', ''),
+                       p.get('properties', {}).get('description', '')))
+
+    data = {
+        'type': 'FeatureCollection',
+        'features': features_sorted
+    }
+
+    return data

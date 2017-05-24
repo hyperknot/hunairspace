@@ -63,7 +63,9 @@ def process_dms_str(dms_str):
 
 
 def process_circle(circle_str):
-    regex = r'(\d+(?:\.\d+)?) KM.*?(\d+[NS] \d+[EW])$'
+    # TODO A circle radius 5.556 KM centered on 464758N 0194102E substracted the Kecskemet MCTR airspace.
+
+    regex = r'(\d+(?:\.\d+)?) KM.*?(\d+[NS] \d+[EW])'
     m = re.search(regex, circle_str.strip())
     assert len(m.groups()) == 2
 

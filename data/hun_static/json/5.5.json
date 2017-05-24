@@ -113,18 +113,114 @@
   }, 
   {
     "class": "SA", 
+    "geom_raw": "A circle radius 7 KM centered on 464036N 0210938E", 
+    "lower_raw": "4000 FT ALT", 
+    "name": "LHSDZLHBC / BEKESCSABA", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 155"
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "471037N 0182857E  - 470619N 0182317E  - 470145N 0182636E  - 470237N 0183147E  - 470840N 0183425E  - 471037N 0182857E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHBD / BORGOND", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 155 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 5 KM centered on 465318N 0185438E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHDV / DUNAUJVAROS", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 135 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 1.85 KM centered on 473425N 0191957E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHGD / GODOLLO", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 145 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "472810N 0212450E  - 472228N 0211500E  - 472733N 0211500E  - 472942N 0211839E  - 472810N 0212450E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHHO / HAJDUSZOBOSZLO", 
+    "notes": "HX\nCLASS: G", 
+    "upper_raw": "FL 145 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "463356N 0185419E  - 463435N 0185817E  - 463118N 0190123E  - 463000N 0185519E  - 463356N 0185419E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHKA / KALOCSA", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 135 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "464600N 0194546E  - 464800N 0195100E  - 464558N 0195533E  - 464200N 0195600E  - 464600N 0194546E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHKH / KISKUNFELEGYHAZA", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 135 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "463939N 0191442E  - 463914N 0191511E  - 463854N 0191434E  - 463919N 0191403E  - 463939N 0191442E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHKI / KISKOROS / AKASZTO", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "3500 FT ALT "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "463100N 0173400E  - 463100N 0174700E  - 461800N 0174700E  - 461800N 0173400E  - 463100N 0173400E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHKV / KAPOSUJLAK", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 165 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 5.556 KM centered on 464758N 0194102E substracted the Kecskemet MCTR airspace.", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHMP / MATKOPUSZTA", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 145 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 10 KM centered on 475856N 0214100E", 
+    "lower_raw": "4000 FT ALT", 
+    "name": "LHSDZLHNY / NYIREGYHAZA", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 155"
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 11.11 KM centered on 465119N 0180551E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHSK / KILITI SKYDIVE BALATON", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 155 "
+  }, 
+  {
+    "class": "SA", 
+    "geom_raw": "A circle radius 2 KM centered on 463642N 0201700E", 
+    "lower_raw": " GND", 
+    "name": "LHSDZLHSZ / SZENTES", 
+    "notes": "HX\nClass: G", 
+    "upper_raw": "FL 115 "
+  }, 
+  {
+    "class": "SA", 
     "geom_raw": "A circle radius 3.15 KM centered on 472037N 0185909E", 
     "lower_raw": "3500 FT ALT", 
     "name": "LHSDZLHTL / TOKOL", 
     "notes": "HX\nClass: G", 
     "upper_raw": "FL 145"
-  }, 
-  {
-    "class": "SA", 
-    "geom_raw": "A circle radius 11.11 KM centered on 465119N 0180551E", 
-    "lower_raw": "GND", 
-    "name": "LHSDZLHSK / KILITY SKYDIVE BALATON", 
-    "notes": "HX\nClass: G", 
-    "upper_raw": "FL 155"
   }
 ]

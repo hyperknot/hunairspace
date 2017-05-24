@@ -1,6 +1,13 @@
 [
   {
     "class": "TMA", 
+    "geom_raw": "Lateral limits as for Budapest FIR", 
+    "lower_raw": "9500 FT ALT", 
+    "name": "BUDAPEST CTA", 
+    "upper_raw": "FL 660"
+  }, 
+  {
+    "class": "TMA", 
     "geom_raw": "474419N 0181530E along border HUNGARY_SLOVAKREPUBLIC - 474551N 0182754E  - 473503N 0182754E  - 470908N 0184432E  - 471331N 0181507E  - 473521N 0181527E  - 474419N 0181530E", 
     "lower_raw": "7500 FT ALT", 
     "name": "BUDAPEST TMA1", 
