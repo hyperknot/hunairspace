@@ -3,3 +3,4 @@ beautifulsoup4
 geojson
 pyproj
 shapely
+lxml
