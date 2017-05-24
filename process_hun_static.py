@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import geojson
-from pgairspace.config import geojson_dir, geom_json
+from pgairspace.config import geojson_dir, geom_json, static_dir
 from pgairspace.utils import delete_dir, ensure_dir, read_file_contents, write_file_contents
 from pgairspace.geom import load_border
 from pgairspace.features import make_features, write_geojsons
@@ -11,13 +11,15 @@ from pgairspace.hun.features import process_altitudes, process_g_airspace, subtr
 
 
 # download and process to json
-# process_chapters()
-# process_airports()
+# delete_dir(static_dir)
+
+process_chapters()
+process_airports()
 
 # geometry
-# border = load_border('hungary.json')
-# features = make_features(border, process_raw_geometry)
-# write_file_contents(geom_json, geojson.dumps(features))
+border = load_border('hungary.json')
+features = make_features(border, process_raw_geometry)
+write_file_contents(geom_json, geojson.dumps(features))
 
 # features
 features = geojson.loads(read_file_contents(geom_json))

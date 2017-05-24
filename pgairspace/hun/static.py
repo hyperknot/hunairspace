@@ -5,12 +5,12 @@ from ..utils import beautify_html, write_file_contents, pp, write_json, ensure_d
     read_file_contents
 from ..config import html_dir, json_dir
 
-
-version = '2015-08-20'
+# index on https://ais.hungarocontrol.hu/aip/
+version = '2017-06-22'
 
 
 def process_chapters():
-    for chapter in chapters:
+    for chapter in chapter_list:
         data = process_chapter(chapter)
         write_json(os.path.join(json_dir, '{}.json'.format(chapter)), data)
 
@@ -26,20 +26,30 @@ def process_airports():
 
 
 def process_chapter(chapter):
+    print '---'
+    print 'Processing chapter:', chapter
+
     ensure_dir(html_dir)
     ensure_dir(json_dir)
 
-    download_chapter(chapter, html_dir)
+    ok = download_chapter(chapter, html_dir)
+    assert ok, 'Error downloading chapter: ' + chapter
+
     html_file = os.path.join(html_dir, '{}.html'.format(chapter))
-    soup = BeautifulSoup(read_file_contents(html_file), "lxml")
-    data = chapters[chapter](soup, chapter)
+    soup = BeautifulSoup(read_file_contents(html_file), 'lxml')
+    data = chapter_list[chapter](soup, chapter)
     return data
 
 
 def process_airport(airport):
-    download_airport(airport, html_dir)
+    print '---'
+    print 'Processing airport:', airport
+
+    ok = download_airport(airport, html_dir)
+    assert ok, 'Error downloading airport: ' + airport
+
     html_file = os.path.join(html_dir, '{}.html'.format(airport))
-    soup = BeautifulSoup(read_file_contents(html_file), "lxml")
+    soup = BeautifulSoup(read_file_contents(html_file), 'lxml')
     data = parse_airport(soup, airport)
     return data
 
@@ -50,12 +60,15 @@ def download_chapter(chapter, dir):
     url = url_template.format(version=version, chapter=chapter)
     html_file = os.path.join(dir, '{}.html'.format(chapter))
     if os.path.isfile(html_file):
-        return
-    print html_file
+        return True
+
     r = requests.get(url)
     if r.ok:
+        print 'Downloaded:', html_file
         html = beautify_html(r.text)
         write_file_contents(html_file, html)
+
+    return r.ok
 
 
 def download_airport(airport, dir):
@@ -64,12 +77,15 @@ def download_airport(airport, dir):
     url = url_template.format(version=version, airport=airport)
     html_file = os.path.join(dir, '{}.html'.format(airport))
     if os.path.isfile(html_file):
-        return
-    print html_file
+        return True
+
     r = requests.get(url)
     if r.ok:
+        print 'Downloaded:', html_file
         html = beautify_html(r.text)
         write_file_contents(html_file, html)
+
+    return r.ok
 
 
 def parse_2(soup, _):
@@ -125,7 +141,7 @@ def parse_5_table(table, title, chapter):
         'Prohibited Areas': 'P',
         'Restricted Areas': 'R',
         'Danger Areas': 'D',
-        'Temporary Restricted Areas': 'TRA',
+        'Temporary Reserved Areas': 'TRA',
         'Aerobatics area': 'SA',
         'Glider areas': 'G',
         'Drop zones': 'SA',
@@ -160,6 +176,8 @@ def parse_5126_tr(tr):
     for i, td in enumerate(tds):
         parts = [l.strip() for l in td.text.splitlines() if l.strip()]
         if i == 0:
+            if len(parts) == 3 and '/' in parts[1]:
+                parts = [parts[0] + ' ' + parts[1], parts[2]]
             assert len(parts) == 2
             data['name'] = parts[0]
             data['geom_raw'] = parts[1]
@@ -182,6 +200,10 @@ def parse_55_tr(tr):
     for i, td in enumerate(tds):
         parts = [l.strip() for l in td.text.splitlines() if l.strip()]
         if i == 0:
+            try:
+                parts.remove('substracted the LHB24 airspace.')  # TODO
+            except Exception:
+                pass
             assert len(parts) == 2
             data['name'] = parts[0]
             data['geom_raw'] = parts[1]
@@ -189,10 +211,12 @@ def parse_55_tr(tr):
             if len(parts) == 3:
                 data['upper_raw'] = parts[0]
                 data['lower_raw'] = parts[2]
-            else:
-                assert len(parts) == 2
+            elif len(parts) == 2:
                 data['upper_raw'] = parts[0].split(' /')[0]
                 data['lower_raw'] = parts[1]
+            else:
+                data['upper_raw'], data['lower_raw'] = parts[0].split('/')
+
         if i == 3:
             data['notes'] = '\n'.join(parts)
     return data
@@ -355,9 +379,9 @@ def get_class_from_name(name):
         raise ValueError('No class found', name)
 
 
-airports = ['LHBC', 'LHBP', 'LHDC', 'LHFM', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
+airports = ['LHBC', 'LHBP', 'LHDC', 'LHNY', 'LHPP', 'LHPR', 'LHSM', 'LHUD']
 
-chapters = {
+chapter_list = {
     '2.1': parse_2,
     '2.2': parse_2,
     '5.1': parse_5,
